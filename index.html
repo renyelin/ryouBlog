@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="ousenseiryuo,个人博客" />
+    <meta name="description" content="ousenseiryuo的个人博客" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <title>ousenseiryuo的个人博客</title>
+    <link rel="icon" href="pic/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/picture.css" />
+    <link rel="stylesheet" type="text/css" href="css/anime.css" />
+    <style>
+    </style>
+</head>
+<body>
+    <header style="position:fixed;z-index:9999;">
+        <div class="wrapper">
+            <div style="width:400px;height:60px;display:block;">
+                <h1>
+                    <a href="/" style="padding:0px;text-decoration:none;display:flex;">
+                        <div style="background-image:url(b.ico);background-size:cover;height:50px;filter:opacity(0.92)"><img class="punana" src="a.ico" alt="" style="height:50px;"/></div>
+                        <b style="font-size:40px;padding-bottom:0px;color:deepskyblue;">ousenseiryuo</b>
+                    </a>
+                </h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="https://space.bilibili.com/1524419912?spm_id_from=333.1007.0.0" target="_blank"><img src="pic/bilibili.png" /></a></li>
+                    <li><a href="https://www.luogu.com.cn/blog/ousenseiryou/" target="_blank"><img src="pic/luogu.png" /></a></li>
+                    <li><a href="https://github.com/renyelin" target="_blank"><img src="pic/github.png" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div style="background-color:rgba(0,0,0,0.2);width:350px;height:3000px;float:left"><div id="left"></div></div>
+    <div style="background-color:rgba(0,0,0,0.2);width:350px;height:3000px;float:right"><div id="right"></div></div>
+    <div id="between">
+        <!--picture-->
+        <div id="picture">
+            <ul style="display:flex;perspective:1000px">
+                 <img src="" class="midPic" />
+            </ul>
+            <botton class="prev"><</botton>
+            <botton class="next">></botton>
+            <script>
+                //picture的轮播and随机背景图
+                const img = document.querySelector('.midPic')
+                const next = document.querySelector('.next')
+                const prev = document.querySelector('.prev')
+                let i = 0
+                let j = Math.floor(Math.random() * 35)
+                img.src = 'pic/' + j+ '.png'
+                let k = Math.floor(Math.random() * 33)
+                document.body.style.backgroundImage = `url(pic/${k}.jpg)`;
+                next.addEventListener('click', function () {
+                    i++
+                    i = i == 35 ? 0 : i
+                    img.src = 'pic/' + i + '.png'
+                })
+                prev.addEventListener('click', function () {
+                    i--
+                    i = i == -1 ? 34 : i;
+                    img.src = 'pic/' + i + '.png'
+                })
+                let timerId = setInterval(function () {
+                    next.click()
+                }, 2000)
+                const picture = document.querySelector('#picture')
+                picture.addEventListener('mouseenter', function () {
+                    clearInterval(timerId)
+                })
+                picture.addEventListener('mouseleave', function () {
+                    timerId = setInterval(function () {
+                        next.click()
+                    }, 2000)
+                })
+            </script>
+        </div>
+        <p style="text-align:center;font-size:60px;font-style: italic; margin: 20px 0 35px 0;font-weight: bold;font-family:'STXingkai', serif;"><b style="color:deepskyblue;">你的日常</b> &nbsp &nbsp 皆是奇迹</p>
+        <div id="categorize" >
+            <div id="math"><a href="STUDY/math.html" target="_blank">math</a></div>
+            <div id="web"><a href="STUDY/web.html" target="_blank">web</a></div>
+            <div id="foundationOfProgramme"><a href="STUDY/FoP.html" target="_blank">FoP</a></div>
+            <div id="knickknacks"><a href="STUDY/knicks.html" target="_blank">knicks</a></div>
+            <div id="algorithm"><a href="STUDY/algorithm.html" target="_blank">algorithm</a></div>
+        </div>
+        <div class="cube" style="margin-top:30px;margin-left:0;height:600px;width:744px;position:relative;transition:all 1s;transform-style:preserve-3d;">
+            <div class="front" style="height: 600px; width: 372px; position: absolute; top: 0; left: 0; background-image: url(pic/x.jpg); background-size: cover; border-radius: 20px;"></div>
+            <div class="back" style="height: 600px; width: 372px; position: absolute; top: 0; left: 0; background-image: url(pic/y.jpg); background-size: cover; border-radius: 20px; transform: rotateY(90deg) translateX(186px) translateZ(186px); "></div>
+        </div>
+        <div id="categorize">
+            <div id="anime"><a href="entertainment/anime.html" target="_blank">anime</a></div>
+            <div id="funny"><a href="entertainment/funny.html" target="_blank">funny</a></div>
+            <div id="game"><a href="entertainment/game.html" target="_blank">game</a></div>
+        </div>
+    </div>
+    <div class="mika">
+        <img src="mika.png"  />
+    </div>
+    <div class="backtop">
+        <img src="pic/backtop.png" height="100px" />
+    </div>
+    
+    <script src="scripts/backtop.js" async defer></script>
+    <script src="scripts/headerHide.js" async defer></script>
+</body>
+</html>
