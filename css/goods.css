@@ -1,0 +1,53 @@
+/* This file is used to style the goods page */
+
+
+body{
+    background-color: blanchedalmond;
+}
+
+#goods{
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin: 10px 10px;
+    background-color: rgb(255, 220, 178);
+}
+
+#goods li{
+    list-style-image:url(../pic/star.png);
+}
+
+p{
+    font-size: 18px;
+    font-weight: 850;
+}
+
+#goods b{
+    font-size: 17px;
+}
+
+#goods a:link{
+    text-decoration-line: none;
+    color: #000;
+}
+
+#goods a:visited{
+    text-decoration-line: none;
+    color: #000;
+}
+
+#goods a:hover{
+    text-decoration-line: underline;
+    color: purple;
+}
+
+#goods img{
+    vertical-align: top;
+    height: 50px;
+    width: 70px;
+}
+
+#goods #link{
+    vertical-align: middle;
+    height: 40px;
+    width: auto;
+}

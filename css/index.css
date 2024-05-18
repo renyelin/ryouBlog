@@ -1,0 +1,157 @@
+﻿*{
+    cursor:url('../bili.png'),pointer;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    width:100%;
+    height: 80px;
+    background-image: repeating-linear-gradient(90deg,aquamarine,aqua);
+    box-shadow: rgba(0,0,0,0.7) 2px 5px 6px 10px;
+    background-attachment:fixed;
+    transition:all .7s;
+}
+
+.wrapper {
+     display: flex;
+     padding-top:20px;
+     margin:0 auto;
+     width:900px;
+ }
+
+ #left {
+    float: left;
+    width: 350px;
+    height: 3000px;
+    background-image: url(../pic/c.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 170px;
+    background-position: left bottom;
+}
+
+#between {
+    padding:100px;
+    width:944px;
+    margin: 0 auto;
+    height: 3000px;
+    background-color: rgba(256,256,256,0.4);
+}
+
+#right {
+    float: right;
+    width: 350px;
+    height: 3000px;
+    background-image: url(../pic/d.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 190px;
+    background-position: right bottom;
+}
+
+#between #picture {
+    margin: 0 auto;
+    background-color:rgba(0,0,0,0);
+    border-radius:10px;
+    height: 450px;
+    width: 750px;
+    background-color: khaki;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+#between #categorize{
+    margin: 10px auto;
+    border-radius: 15px;
+    width: 750px;
+    height: 100px;
+    background-color: bisque;
+    display: flex;
+}
+
+#categorize div{
+    width: 100px;
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+#categorize div a{
+    text-decoration: none;
+    font-weight: bold;
+    color: blueviolet;
+    transition: all .5s;
+}
+#categorize div a:hover{
+    cursor: pointer;
+    font-size: 120%;
+}
+
+#categorize #math{
+    background-color: red;
+}
+
+#categorize #web{
+    background-color: aquamarine;
+}
+
+#categorize #foundationOfProgramme{
+    background-color: burlywood;
+}
+
+#categorize #knickknacks{
+    background-color: rgb(3, 250, 163);
+}
+
+#categorize #algorithm{
+    background-color: chocolate;
+}
+
+#categorize #anime{
+    background-color: coral;
+}
+
+#categorize #game{
+    background-color: cornflowerblue;
+}
+
+#categorize #funny{
+    background-color: darkcyan;
+}
+
+.nav{
+    margin-left:400px;
+}
+
+.nav ul{
+    display:flex;
+}
+
+.nav ul li a img{
+    height:20px;
+    opacity:0.5;
+    transition:all 0.4s;
+}
+
+.nav ul li a img:hover{
+    height:25px;
+    opacity:0.9;
+}
+
+.nav li {
+    margin-top: 30px;
+    margin-right: 40px;
+    list-style-image:url(../pic/star.png);
+}
+
+
