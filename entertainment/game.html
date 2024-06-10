@@ -13,13 +13,116 @@
         <link rel="stylesheet" href="">
         <link rel="stylesheet" href="../css/goods.css">
         <link rel="stylesheet" href="../css/picture.css">
+        <link rel="stylesheet" href="">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="../scripts/editor.md-master/examples/js/jquery.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/marked.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/prettify.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/raphael.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/underscore.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/sequence-diagram.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/flowchart.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/jquery.flowchart.min.js"></script>
+        <script src="../scripts/editor.md-master/editormd.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <b style="font-size: 100px;">ryouのgame推荐</b>
+        <div id="test-editormd1" >
+            <textarea style="display: none;">
+```math
+\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)
+```
+
+```katex
+\displaystyle 
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        } 
+    }
+```
+
+```latex
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+```
+            </textarea>
+        </div>
+
         
+        <script>
+            testEditor1 = editormd.markdownToHTML("test-editormd1", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+        </script>
+        
+        <script>
+            function showMarkdown()
+        {
+            // 获取表单变量
+            var f=form;
+            // 创建XMLHttpRequest对象
+            var xmlhttp;
+
+            var reader = new FileReader();
+            
+            
+            
+            // 得到服务器响应后，对得到的Markdown文档进行解析
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    // 这里调用了marked框架中的marked函数实现Markdown2HTML的解析
+                     document.getElementById("content").innerHTML="1";
+                }
+            }
+            
+            
+            // 向服务器发送请求，获取你需要的Markdown文档
+            xmlhttp.open("GET",f.q.value,true);
+            xmlhttp.send();
+            }
+        
+            </script>
+            <div class="container" style="margin-top:30px">
+                <form name="form" action="" method="post">
+                    <select name="q">
+                        <option class="active" alue="">选择一个笔记:</option>
+                        <option value="A.md">第一个Markdown文档</option>
+                        <option value="B.md">第二个Markdown文档</option>
+                        <option value="C.md">第三个Markdown文档</option>
+                        <option value="Evalue-TranscriptomeData.md">第四个Markdown文档</option>
+                    </select>
+                    <input type="button" value="显示" onclick="showMarkdown()">
+                </form>
+            
+            <div id="content"></div>
+            </div>
+
+
+
+
+
+
+
+
         <div class="backtop">
             <img src="../pic/backtop.png" alt="" height="100px">
         </div>
@@ -29,3 +132,4 @@
         <script src="" async defer></script>
     </body>
 </html>
+
