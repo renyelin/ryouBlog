@@ -16,8 +16,28 @@ body{
     list-style-image:url(../pic/star.png);
 }
 
+#goods li li{
+    list-style-image: none;
+}
+
+#goods li textarea{
+    display: none;
+}
+
+#goods p span{
+    font-size: 20px;
+}
+
+#goods li p{
+    margin: 10px 0;
+}
+
+#goods li mfrac{
+    font-size: 25px;
+}
+
 p{
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 850;
 }
 
