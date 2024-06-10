@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ryouのmath废料</title>
+        <link rel="icon" href="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base target="_blank">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="../css/goods.css">
+        <link rel="stylesheet" href="../css/picture.css">
+        <link rel="stylesheet" href="../css/searchButton.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="../scripts/editor.md-master/examples/js/jquery.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/marked.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/prettify.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/raphael.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/underscore.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/sequence-diagram.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/flowchart.min.js"></script>
+        <script src="../scripts/editor.md-master/lib/jquery.flowchart.min.js"></script>
+        <script src="../scripts/editor.md-master/editormd.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <form name="f1" action="" onSubmit="if(this.t1.value!=null && this.t1.value!='')
+        findString(this.t1.value);return false">
+            <input type="text" name=t1 value="" size=30 placeholder="What are you looking for?">
+            <input type="submit" name=b1 value="Find">
+        </form>
+
+
+        <b class="header" style="font-size: 100px;">ryouのmath废料</b>
+        <div id="goods">导航：<a href="#math1" target="_self">高数</a>、<a href="#math2" target="_self">线性代数</a>、<a href="#math3" target="_self">概率论</a>、<a href="#math4" target="_self">离散数学</a>、<a href="#math5" target="_self">计算方法</a></div>
+        <div name="math1">
+            <p>高等数学</p>
+            <div id="goods">
+                <b>重点难点积分公式</b>
+                <li><a href="https://zh.wikipedia.org/wiki/%E7%A7%AF%E5%88%86%E8%A1%A8">如你所见，这是一个链接：https://zh.wikipedia.org/wiki/积分表</a></li>
+                <li>常用积分公式：
+                  <div id="editormd6"><textarea>
+- ```latex
+\int{\frac{1}{x}dx=\ln \left| x \right|+C}
+```
+- ```latex
+\int{\ln xdx=x\ln x-x+C}
+```
+- ```latex
+\int{\sec ^2}xdx=\tan x+C
+```
+- ```latex
+\int{\csc ^2}xdx=-\cot x+C
+```
+- ```latex
+\int{\frac{1}{\sqrt{1-x^2}}dx}=\arcsin x+C
+```
+- ```latex
+\int{\frac{1}{1+x^2}dx}=\arctan x+C
+```
+- ```latex
+\int{\tan xdx}=\ln |\sec x|+C
+```
+- ```latex
+\int{\cot xdx}=- ln |\csc x|+C
+```
+- ```latex
+\int{\frac{1}{a^2+x^2}dx}=\frac{1}{2}\arctan \frac{x}{a}+C
+```
+- ```latex
+\int{\frac{1}{\sqrt{a^2-x^2}}dx}=\arcsin \frac{x}{a}+C
+```
+- ```latex
+\int{\frac{1}{a^2-x^2}dx}=\ln \left| \frac{a+x}{a-x} \right|+C
+```
+<b>将分母拆分成一次项，各个项分子设为未知常数，可求出解</b>
+- ```latex
+\int{\frac{1}{\sqrt{a^2+x^2}}dx}=\ln \left| x+\sqrt{a^2+x^2} \right|+C
+```
+<b>三角变换，x=a·tan y</b>
+                    </textarea></div></li>
+            </div>
+            <div id="goods">
+                <b>等价无穷小</b>
+                <li>当x → 0，<img style="height: 400px;width: auto;" src="pic\math6.png" /></li>
+                <li>用处：洛必达法则（在极限存在的情况下，分子分母都无穷小或无穷大，则分子分母同时分别求导），</li>
+                <li>大多可用taylor公式（taylor公式：f(x) = f(0) + f'(0)x + f''(0)/2!x^2 + ... + O(x^n)）</li>
+            </div>
+            <div id="goods">
+                <b>空间解析几何</b>
+                <li>右手坐标系</li>
+                <li>证明三个向量共面：(<b>a</b> ⨯ <b>b</b>) · <b>c</b> = 0</li>
+                <li>平面方程表达式：
+                  <li>点法式：A(x-x<small>0</small>) + B(y-y<small>0</small>) + C(z-z<small>0</small>) = 0</li>
+                  <li>一般式：Ax + By + Cz + D = 0</li>
+                  <li>截距式：<math><mfrac><mtext>x</mtext><mtext>a</mtext></mfrac></math> + <math><mfrac><mtext>y</mtext><mtext>b</mtext></mfrac></math> + <math><mfrac><mtext>z</mtext><mtext>c</mtext></mfrac></math> = 1</li>
+                  <li></li>
+                </li>
+            </div>
+            <div id="goods">
+                <b>全增量、全微分</b>
+                <li>在微积分中，函数f在某一点的全微分（英语：total derivative）是指该函数在该点附近关于其自变量的最佳线性近似。与偏微分不同，全微分反映了函数关于其所有自变量的线性近似，而非单个自变量。</li>
+                <li>全微分可以看成是把单变量函数的微分推广到多变量函数上：单变量函数的全微分与其微分相同；而多变量函数在某点的全微分为一线性映射，通常可用<b>矩阵或向量</b>表示。</li>
+                <li>充分条件：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4aa70292f5163b2970512236df163523facd9ecc" alt=""></li>
+                <li>必要条件：对于二元函数，在该点可微，则在该点的全微分为：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/586865355c112fa118e1b149ad31a24a23b78ee1" alt=""></li>
+            </div>
+            <div id="goods">
+                <b>链式法则</b>
+                <li><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/faecaadc0efc1c583206cdf003051e4206f76cd1" alt=""></li>
+                <li><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2db137f3d7ab9c38df54fe96f0beb1272cecdc69" alt=""></li>
+            </div>
+            <div id="goods">
+                <b>方向导数和梯度</b>
+                <li>方向导数：偏导数的推广，表示某一函数沿着某一方向的变化率。<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2f4e2edbfad07fc6ff2b85870bb7c5324a084211" alt="directional derivative" title="方向导数"></li>
+                <li>梯度：其方向是在该点的最快增长方向，其量是在这个方向的增长率。<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eb792fff17ea6517a54075e24a6b3ab131ba3885"  alt="梯度公式" title="梯度"></li>
+                <li>利用方向导数描述梯度：函数f在P点的梯度<b style="color: black;font-weight: 1000;">grad</b> f是一个向量，它的方向是函数f变化最快的方向，它的模就是函数f在P点的方向导数最大值。</li>
+                <li><a href="https://www.zhihu.com/question/26966355/answer/154857139">全导数，偏导数，方向导数</a></li>
+            </div>
+            <div id="goods">
+                <b>格林公式</b>
+            </div>
+            <div id="goods">
+                <b>散度与旋度（向量分析）</b>
+                <li>散度与通量，旋度与环量</li>
+                <b>---------------------------</b>
+                <li>散度：向量分析中的一个向量算子，将向量空间上的一个向量场（矢量场）对应到一个标量场上。三维空间的散度（且一阶连续偏导）：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/12ab26a25ef068ec836cc5ecb86a13cbf7dbf39a" alt="散度"></li>
+                <li>相关：四元数（散度研究起源），电场力</li>
+                <li>高斯散度定理（Gauss's Divergence Theorem）：空间闭区域Ω是由分片光滑的闭曲面Σ所围起来的三维区域，则有<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3059a350d99d27c7eb03cbbda0bf8f0332f4aea5" alt=""><img id="link" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/OiintLaTeX.svg/38px-OiintLaTeX.svg.png" alt=""><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0df468ccfb5e81a0c6d3997c6c9f2c681c7d3622" alt="" style="height: 20px;"></li>
+                <li>高斯公式散度表示：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0b434e1cb857ca620f2a30516184a87a076477e1" alt=""><img id="link" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/OiintLaTeX.svg/38px-OiintLaTeX.svg.png" alt=""><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b940e5719e9c3e2bda6cfe2b38a1fd0972bbfdae" alt="" style="height: 20px;"></li>
+                <b>---------------------------</b>
+                <li>旋度（curl或者记作rot）：是一个向量算子，表示在三维欧几里德空间中的向量场的无穷小量旋转。在向量场每个点上，点的旋度表示为一个向量，称为旋度向量。这个向量的特性（长度和方向）刻画了在这个点上的旋转。</li>
+                <li><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5ff2c9452f9f2638c112de1cb29aa3da9871dd19" alt=""></li>
+                <li>相关：四元数，光学场理论</li>
+                <li>斯托克斯定理：<img id="link"  src="https://wikimedia.org/api/rest_v1/media/math/render/svg/66f17ab7e17b42628fa05426ae414331c4a2050a" alt=""><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4f5a48f98078d7d3bf47a0a894c2d1deca83d34c" alt=""></li>
+                <li>其旋度表示：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5dce42c3b8414d2d35aee01a54230600ae038252" alt=""></li>
+            </div>
+            <div id="goods">
+                <b>微分方程</b>
+                <li>
+                    <b>几种常见微分方程：</b><div id="editormd5"><textarea>
+- 可分离变量方程：N(y)y = M(x)x
+- ```latex
+y'=f\left( \frac{y}{x} \right)
+```
+- ```latex
+y'+P\left( x \right) y=Q\left( x \right) 
+```
+- ```latex
+y'+P\left( x \right) y=Q\left( x \right) y^n
+```
+- ```latex
+P\left( x,y \right) dx+Q\left( x \right) dy=0
+```
+- ```latex
+y''=F\left( x,y' \right) 
+```
+- ```latex
+F\left( y,y',y'' \right) =0
+```
+- ```latex
+y''+P\left( x \right) y'+Q\left( x \right) y=f\left( x \right) 
+```
+<b>注意齐次方程（线性）特解y = e^mx和y = x</b>
+- ```latex
+y''+py'+qy=f\left( x \right) 
+```
+                    </textarea></div>
+                </li>
+            </div>
+            <div id="goods">
+            <b>重积分的应用</b>
+            <li>质心<a href="pic/math1.png"><img src="pic/math1.png" alt="" title="质心"></a></li>
+            <li>转动惯量<a href="pic/math2.png"><img src="pic/math2.png" alt="" title="转动惯量"></a></li>
+            <li>引力<a href=""></a></li>
+            </div>
+            <div id="goods">
+                <b>物理学应用</b>
+                <li></li>
+            </div>
+            <div id="goods">
+                <b>级数</b>
+                <li>级数（英语：Series）是数学中一个有穷或无穷的序列之和，如果序列是有穷序列，其和称为有穷级数；反之，称为无穷级数（一般也简称为级数）。</li>
+                <li>柯西审敛准则（在一个<a href="https://zh.wikipedia.org/wiki/%E5%AE%8C%E5%A4%87%E7%A9%BA%E9%97%B4">完备空间</a>中）：对任意的<img id="link" style="height: 20px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/568095ad3924314374a5ab68fae17343661f2a71"/>，总存在<b>N0>0</b>，使得任意的<b>n>m>N0</b>，<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dc4ad6b1b8a04c5b5afcae526ca25e3357d300b9"></li>
+            </div>
+            <div id="goods">
+                <b>调和级数</b>
+                <li>调和级数（英语：Harmonic series）: <img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/65256fdfa1fec9932b25e831fa1f6441f4a51e8c"/></li>
+                <li>比较审敛法：<a href="pic/math3.png"><img src="pic/math3.png" alt=""></a></li>
+                <li>积分判别法（integral test）：<a href="pic/math4.png"><img src="pic/math4.png" alt=""></a></li>
+                <li>反证法：<a href="pic/math5.png"><img src="pic/math5.png" alt=""></a></li>
+                <li><b>相关级数：</b></li>
+                <li style="list-style-image: none;">交错调和级数：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b88effc45f24f275e82141f350909c31e7c85021" alt="">；拓展：<a href="https://zh.m.wikipedia.org/wiki/%E5%A2%A8%E5%8D%A1%E6%89%98%E7%B4%9A%E6%95%B8">墨卡托级数</a>（自然对数的泰勒级数形式）、<a href="https://zh.m.wikipedia.org/wiki/%CE%A0%E7%9A%84%E8%8E%B1%E5%B8%83%E5%B0%BC%E8%8C%A8%E5%85%AC%E5%BC%8F">π的莱布尼茨公式</a>。</li>
+                <li style="list-style-image: none;">广义调和级数：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0c20acc81c043dae35209c2296c00e7221d70683" alt="">，（a！=0，b为实数），由比较审敛法可知广义调和级数全部发散。</li> 
+                <li style="list-style-image: none;">p级数：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/14b722565fe15d97c09ebb6d6717f9ac02e08f40" alt="">，p<=1发散，p>1收敛（过饱和调和级数）（其和也就是<a href="https://zh.m.wikipedia.org/wiki/%E9%BB%8E%E6%9B%BC%CE%B6%E5%87%BD%E6%95%B8">黎曼ζ函数</a>在p的值）</li>
+                <li style="list-style-image: none;">随机调和级数：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/38e440bd646f0d25a7c45624bd1e3e4e2b546241" alt="">，其中分子是恒等分布的独立随机变量，取值范围为+1和-1，取这两值的概率都是0.5。该级数收敛的概率是1。</li>
+            </div>
+            <div id="goods">
+                <b>泰勒级数</b>
+            </div>
+            <div id="goods">
+                <b>傅里叶级数</b>
+                <li><img id="link" style="height: 100px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a18f45b6fd2a0a4e6e36f0c0ee6a94ddb219545f" alt=""></li>
+                <li><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cdf731c3bf53631dd6196139da1d743adc0a5a79" alt=""></li>
+            </div>
+        </div>
+        <div id="math2">
+            <p>线性代数</p>
+            <div id="goods">
+                <b>克拉默法则</b>
+                <li>方程组：<img id="link" style="height: 60px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9946f0492e9eb0c2a7a84983e267d6b51fb2099e" alt="">;<br>
+                &emsp;&emsp;当矩阵可逆时：解为<img id="link" style="height: 120px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f83d9832c809261e5c2d707d3f1aca635a1115bf" alt="">，<img id="link" style="height: 120px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dff330096abc66fd76ed5f9a71e63b6561e33c74" alt="">，<img id="link" style="height: 120px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ce39b2e5c430fb0a32d7685d3a9079c24d4ac195" alt="">
+                </li>
+                <li>
+                    在微分几何上的应用：<img id="link" style="height: 240px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7c53f43640fbb0be9433c152c605819aef994a10" alt="">
+                    <br>&emsp;&emsp;用雅可比矩阵表达：
+                    <img id="link" style="height: 120px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4df30960928eb9cd6771874258233e9710ee8da1" alt="">
+                </li>
+                <li>缺点：难以实际用于计算，引入----><a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E6%B6%88%E5%8E%BB%E6%B3%95">高斯消元法</a>，用于计算机</li>
+            </div>
+            <div id="goods">
+                <b>计算机图形学入门的入门</b>
+            </div>
+        </div>
+        <div id="math3">
+            <p>概率论</p>
+            <div id="goods">
+                <b>正态分布</b>
+                <li>正态分布（normal distribution），物理学中通称高斯分布（Gaussian distribution），是一个非常常见的连续概率分布。</li>
+                <li>概率密度函数为：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6fa0f3778df769845a3862bd22921041c18dd79a" alt=""></li>
+                <li>记为：<img id="link" style="height: 20px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2d941a7a56caf1f30802497907657ab6213f539d" alt="">前者为平均数，后者为标准差。</li>
+            </div>
+        </div>
+        <div id="math4">
+            <p>离散数学</p>
+            <div id="goods">
+                <b>命题逻辑</b>
+                <li>
+                    常用命题定律表达式：<div id="editormd1"><textarea style="display: none;">
+- P → Q ⇔ ¬Q → ¬P ⇔ ¬P V Q
+- P ↔ Q ⇔ ¬P ↔ ¬Q ⇔ (P → Q) ∧ (Q → P)
+- 吸收律1：P ∧ (P ∨ Q) = P
+- 吸收律2：P ∨ (P ∧ Q) = P
+- 德摩根律：¬(P ∧ Q) = ¬P ∨ ¬Q
+                </textarea></div></li>
+                <li>
+                    重言式（永真）和矛盾式（永假）：<div id="editormd2"><textarea>
+- A ⇔ B 当且仅当 A ↔ B是永真式
+- P ⇒ Q (P蕴含Q) 当且仅当 P → Q是永真式
+                </textarea></div></li>
+                <li>
+                    对偶与范式：<div id="editormd3"><textarea>
+
+                </textarea></div></li>
+                <li>
+                    推理理论：<div id="editormd4"><textarea>
+
+                    </textarea></div></li>
+            </div>
+            <div id="goods">
+                <b>谓词逻辑</b>
+                <li>
+                    
+                </li>
+            </div>
+            <div id="goods">
+                <b>平面图</b>
+                <li>欧拉公式：点-边+面=2，v-e+f=2</li>
+                <li>常识：一个平面图的每个面都由至少 3 个边围成，且每个边仅触及 2 个面。即2e>=3f</li>
+                <li>面次数之和：&sum;deg(f)=2e；&sum;deg(f)>=k*f[其中k是一个面至少由几条边围成]</li>
+                <li>完全图 K5和完全二分图 K3,3（汤玛森图）是最“小”的非平面图。</li>
+                <li>K5：<img id="link" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Complete_graph_K5.svg" alt=""></li>
+                <li>K3,3：<img id="link" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Complete_bipartite_graph_K3%2C3.svg" alt=""></li>
+                <li>库拉托夫斯基定理（英语：Kuratowski's theorem）：一个简单图是平面图<b>当且仅当</b>它并不包含一个是 K5 或 K3,3 的分割的子图。</li>
+                <li>华格纳定理（英语：Wagner's theorem）：一个简单图是平面图当且仅当它不是 K5 或 K3,3 的次图。<br>&emsp;&emsp;<small>其中，一个图的次图是将它做有限多次的取子图(删除部分顶点和边)和做边收缩(将某边缩成一个顶点)所得到的图。</small></li>
+                <li>对偶图：对偶图 G* 也是平版图，而且如果 G 是连通的，则 G** 与 G 在球面上是拓朴等价的。换句话说，他们是相同的平面映射。</li>
+            </div>
+            <div id="goods">
+                <b>一笔画问题（边或点）</b>
+                <li>哈密尔顿图（Hamiltonian graph）：图中从一个节点出发，经过每个顶点恰好一次，最后回到起点的回路。<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;<b>充分条件</b>：每一对结点度数之和>=n-1。
+                </li>
+                <li>尤拉图（Eulerian graph）：图中每条边恰好出现一次。<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;<b>充要条件</b>：连通且所有结点度数为偶数。
+                </li>
+            </div>
+            <div id="goods">
+                <b>树</b>
+                <li>二叉树：非空的二叉树，若树叶总数为 n0，分支度为2的总数为 n2，则 n0 = n2 + 1。[点=边+1（n=e+1），单枝点+2*双枝点=边（n1+2*n2=e）]</li>
+                <li>完全m叉树（树叶数t，分支点数i）：（m-1）i=t-1</li>
+                <li>着色问题：Welsh-Powell算法——其实就是在进行贪心算法之前先对节点排了下序，具体过程如下：<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;(1) 将图 G 中的节点按度数的递减顺序进行排列（这种排列可能不是唯一的，因为有些节点的度数可能相同）<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;(2) 用第一种颜色对第一个节点着色，并按排列顺序对与前面着色节点不邻接的每一节点着上同样的颜色<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;(3) 用第二种颜色对尚未着色的节点重复步骤 (2)，用第三种颜色继续这种做法，直到所有的节点全部着上色为止</li>
+                <li>最小生成树：<img id="link" style="height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/MST_kruskal_en.gif" alt="">克鲁斯克尔算法（英语：Kruskal's algorithm）</li>
+            </div>
+        </div>
+        <div id="math5">
+            <p>计算方法</p>
+        </div>
+        <div class="backtop">
+            <img src="../pic/backtop.png" alt="" height="100px">
+        </div>
+        
+
+        <script>
+            testEditor1 = editormd.markdownToHTML("editormd1", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd2", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd3", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd4", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd5", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd6", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd7", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd8", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd9", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd10", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd11", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd12", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          }); 
+            testEditor1 = editormd.markdownToHTML("editormd13", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd14", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd15", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd16", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd17", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd18", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd19", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd20", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd21", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd22", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd23", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd24", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd25", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd26", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd27", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd28", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd29", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd30", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+            testEditor1 = editormd.markdownToHTML("editormd31", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+          });
+        </script>
+
+        <script src="../scripts/backtop.js" async defer></script>
+        <script src="../scripts/searchButton.js" async defer></script>
+        <script src="" async defer></script>
+    </body>
+</html>

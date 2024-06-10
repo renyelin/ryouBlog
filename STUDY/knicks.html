@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ryouの杂七杂八</title>
+        <link rel="icon" href="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/goods.css">
+        <link rel="stylesheet" href="../css/picture.css">
+        <link rel="stylesheet" href="../css/searchButton.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <form name="f1" action="" onSubmit="if(this.t1.value!=null && this.t1.value!='')
+        findString(this.t1.value);return false">
+            <input type="text" name=t1 value="" size=30 placeholder="What are you looking for?">
+            <input type="submit" name=b1 value="Find">
+        </form>
+
+
+        <b style="font-size: 100px;">ryouの杂七杂八</b>
+        <div id="goods"></div>
+        <div id="goods">
+            <b>H.264（MP4）编码原理</b>
+            <li>H.264解码：I帧（关键帧）、P帧、B帧，YUV色彩模型，差值算法</li>   
+            <li>H.264编码使用I帧、P帧和B帧进行压缩,通过预测、残差编码和量化等步骤实现高效编码。视频文件的元数据如分辨率和时长存储在MOV盒子中,可通过部分下载获取。编码过程中采用YUV色彩模型和差值算法优化,最终使用哈夫曼编码进行压缩。</li> 
+        </div>
+        <div id="goods">
+            <b>P2P下载</b>
+            <li>P2P下载是一种分布式下载技术,它通过对等网络连接多个用户,让用户之间共享下载任务,从而节省了服务器的带宽资源。</li>
+            <li>P2P下载的优点是节省了服务器的带宽资源,提高了下载速度,同时也减少了服务器的负载,提高了下载的可靠性。</li>
+            <li>P2P下载的缺点是用户的下载流量可能会受限,用户的下载质量也可能会受到影响。</li>
+            <li>P2P下载的实现方式有两种,一种是基于BitTorrent协议的P2P下载,另一种是基于HTTP协议的P2P下载。</li>
+            <li>其中BitTorrent也就是俗称的BT，是一种基于tracker服务器的点对点文件共享协议,它通过tracker服务器来管理文件分发,用户只需要下载BT客户端,并向tracker服务器注册自己的下载任务,tracker服务器会将用户的请求分配给其他用户,用户之间通过P2P网络进行文件共享。</li>
+            <li>BT的缺点：1.仍旧依赖于服务器；<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;2.滋养了某些吸血鬼行为，如迅雷，只下载不上传
+            </li>
+            <li>应运而生：磁力链接、PT</li>
+            <li>磁力链接：每个用户变成tracker服务器，利用了DHT网络技术（找tracker）<a href="pic/magnet1.png" target="_blank"><img src="pic/magnet1.png" alt="" title="磁力链接"></a></li>
+            <li>PT：在BT基础上增加规则，限制用户在特定圈子内下载，通过积分机制鼓励上传，避免吸血行为，确保上传下载数据平衡。</li>
+        </div>
+        <div id="goods">
+            <b>编程语言的分类</b>
+            <li>大体上，可以将程序设计语言可以分为两类：编译型语言和解释型语言。</li>
+            <li><b>编译型语言</b>：很多传统的程序设计语言，例如Fortran、Ada、Pascal、C、C++和Java。</li>
+            <li>这类语言需要预先将我们写好的源代码(source code)转换成目标代码(object code)，这个过程被称作“编译”。</li>
+            <li>运行程序时，直接读取目标代码(object code)。由于编译后的目标代码(object code)非常接近计算机底层，因此执行效率很高，这是编译型语言的优点。</li>
+            <li>但是，由于编译型语言多半运作于底层，所处理的是字节、整数、浮点数或是其他机器层级的对象，往往实现一个简单的功能需要大量复杂的代码。例如，在C++里，就很难进行“将一个目录里所有的文件复制到另一个目录中”之类的简单操作。</li>
+            <li><b>解释型语言</b>：也称为脚本语言，例如awk、Perl、Python、Ruby与Shell。</li>
+            <li>这类语言不需要预先编译，而是在运行程序时，解释器逐行读取源代码(source code)并执行。</li>
+            <li>使用脚本编程语言的好处是，它们多半运行在比编译型语言还高的层级，能够轻易处理文件与目录之类的对象；缺点是它们的效率通常不如编译型语言。</li>
+        </div>
+        <div id="goods">
+            <b>数学思维</b>
+            <li>Mathematics is the art of giving the same names to different things.</li>
+            <li><b>I+P+P^2+P^3+⋯=(I-P)^(-1)</b></li>
+            <li>数列？级数？向量？行列式？泰勒展开？算子代数！</li>
+            <li><a href="https://www.bilibili.com/video/BV1Kf421X7X9/?spm_id_from=333.1007.tianma.3-3-9.click&vd_source=3d527a72ef33c82b6908a54f540d4ae5" target="_blank">这是一个链接</a>
+        </div>
+        <div id="goods">
+            <b>域名后缀小常识</b>
+            <li>.com：国际通用，商业组织</li>
+            <li>.net：国际通用，网络服务</li>
+            <li>.cn：中国域名，中国企业互联网</li>
+            <li>.org：国际域名，非盈利</li>
+            <li>.top：国际域名，可以用于任何组织和个人</li>
+        </div>
+        <div id="goods">
+            
+        </div>
+        <div id="goods">
+            
+        </div>
+        <div id="goods">
+            
+        </div>
+        <div id="goods">
+            
+        </div>
+        <div id="goods">
+            
+        </div>
+        <div id="goods">
+            
+        </div>
+        <div id="goods">
+            
+        </div>
+        <div id="goods">
+            
+        </div>
+        <div id="goods">
+            
+        </div>
+
+
+
+
+
+        
+
+        <div class="backtop">
+            <img src="../pic/backtop.png" alt="" height="100px">
+        </div>
+
+        <script src="../scripts/searchButton.js" async defer></script>
+        <script src="../scripts/backtop.js" async defer></script>
+        <script src="" async defer></script>
+    </body>
+</html>

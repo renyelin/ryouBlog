@@ -1,0 +1,23 @@
+@media (max-width:750px){
+    #left,
+    #right
+    {
+        display:none;
+    }
+}
+
+@keyframes move{
+    from{
+        top:63%;
+    }
+    to{
+        top:64%;
+    }
+}
+
+.cube{
+    transition:all 1s;
+}
+.cube:hover{
+    transform:rotateY(-90deg);
+}
