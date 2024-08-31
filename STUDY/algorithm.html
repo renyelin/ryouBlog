@@ -11,7 +11,7 @@
         <link rel="icon" href="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="../css/goods.css">
         <link rel="stylesheet" href="../css/picture.css">
         <link rel="stylesheet" href="../css/searchButton.css">
     </head>
@@ -26,16 +26,52 @@
             <input type="submit" name=b1 value="Find">
         </form>
 
-
         <b style="font-size: 100px;">ryouの算法abondon史</b>
+        <div id="goods">导航：</div>
         <div id="goods">
-            
+            <b>基础</b>
+            <li>next_permutation：C++中的全排列函数；</li>
+            <li>stoi() 和 atoi()：字符串转数字；</li>
+            <li>to_string()：数字转字符串；</li>
+            <li>s.find（str）：查找子串，返回子串的起始位置，如果没找到，返回标识string::npos；</li>
+            <li>memset：赋值数组，memset(a,0,sizeof(a))；</li>
+            <li>iota：iota(v.begin(),v.end(),1)，批量递增赋值vector的元素</li>
+            <li>vector&lt;int&gt; v[n]：一个数组，每个元素是一个vector</li>
+            <li>priority_queue&lt;Type, Container, Functional&gt;：Type 为数据类型，Container为保存数据的容器，Functional 为元素比较方式，less&lt;Type&gt; 代表从小到大，greater&lt;Type&gt; 代表从大到小；无参数则默认为大顶堆；</li>
+            <li>function&lt;int(int)&gt;：c++11的标准库类型，可以用于接受lambda的返回值，小括号内为参数列表，外为返回值类型；</li>
         </div>
-        
+
+        <div id="goods">
+            <b>数据结构</b>
+            <li>01字典树：</li>
+        </div>
+
+        <div id="goods">
+            <b>标准库算法</b>
+            <li>erase：在set、list、unordered_map等容器中时间复杂度为O(1)，在vector、deque等容器中时间复杂度为O(n);</li>
+            <li>move：移动元素，减少拷贝，提高效率（针对在堆上分配内存）;</li>
+        </div>
+
+        <div id="goods">
+            <b>编程算法思维</b>
+            <li>位运算与集合：将一个集合被表示为二进制数，且位运算符合集合运算；</li>
+        </div>
+
+        <div id="goods">
+            <b>算法的个人理解</b>
+            <li>x>>1：位运算实现除以二；</li>
+            <li>x&(x-1)：位运算实现取最低位1；</li>
+            <li>Morris 中序遍历 O(n),O(1)：设置predecessor指针，将叶节点的右指针指向下一个应该访问的中节点;</li>
+            <li>KMP：substr()的实现，字符串匹配算法，时间复杂度O(n+m)，n为待匹配字符串长度，m为模式字符串长度；</li>
+            <li>bellman-ford：n-1次重复relaxation，时间复杂度O(mn);</li>
+            <li>dijkstra：适合点少边多的稠密图，时间复杂度O(ElogV)，<a href="https://leetcode.cn/problems/network-delay-time/solutions/2668220/liang-chong-dijkstra-xie-fa-fu-ti-dan-py-ooe8/"><b>这是一个链接</b></a></li>
+        </div>
+
         <div class="backtop">
             <img src="../pic/backtop.png" alt="" height="100px">
         </div>
 
+        
         <script src="../scripts/backtop.js" async defer></script>
         <script src="../scripts/searchButton.js" async defer></script>
         <script src="" async defer></script>

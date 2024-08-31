@@ -11,7 +11,6 @@
         <link rel="icon" href="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
         <link rel="stylesheet" href="../css/goods.css">
         <link rel="stylesheet" href="../css/picture.css">
         <link rel="stylesheet" href="../css/searchButton.css">
@@ -27,6 +26,7 @@
             <input type="submit" name=b1 value="Find">
         </form>
 
+        
 
         <b style="font-size: 100px;">ryouの花哨编程基础</b>
         <div id="goods">导航：<a href="#shell">Shell</a></div>
@@ -47,6 +47,200 @@
                 <li>bash是最常用的Shell解释器，它是GNU Project的自由软件，是Linux、Unix和Mac OS X的默认Shell。</li>
             </div>
         </div>
+
+        <div name="512">
+            <p>深入了解计算机系统</p>
+            <div id="goods">
+                <b>int、unsigned、float、double...</b>
+                <li><img src="./pic/numeric_ranges.png" style="height: 400px;width: auto;" alt=""></li>
+                <li><img src="./pic/conversion_visualize.png" style="height: 400px;width: auto;" alt=""></li>
+                <li>位移：1个时钟周期；乘法：数个时钟周期；除法：30个时钟周期；</li>
+                <li>big endian、little endian：字节序，大端序是高位字节排放在内存低地址端，小端序是低位字节排放在内存低地址端。</li>
+                <li>小数：<img src="./pic/float.png" style="height: 400px;width: auto;" alt=""></li>
+            </div>
+            <div id="goods">
+                <b>汇编语言</b>
+                <li>算术指令：leaq、addq、subq、andq、orq... （q：quadword 四字）（sd:single double doubleword 单双字）(apd:add packed doubleword 加包双字)</li>
+                <li>寄存器：%rax、%rbx、%rcx、%rdx、%rsi、%rdi（数组基指针）、%rsp（栈指针）、%rbp(基指针)、%rip（指令指针）、%r8~%r15</li>
+                <li>寄存器：%xmm0~%xmm15(浮点数寄存器，128位)，%ymm0~%ymm15(浮点数寄存器，256位)，%zmm0~%zmm31(浮点数寄存器，512位)</li>
+                <li>条件码：%cf、%zf、%sf、%of</li>
+                <li>条件循环：（goto语句）loop:... goto loop，（汇编指令）.L2: ... j() .L2；j()为jump，()为条件</li>
+                <li>callq：调用函数，返回地址存入栈顶，返回地址指向下一条指令。</li>
+                <li>retq：返回函数，从栈顶弹出返回地址，并跳转到该地址。</li>
+                <li>univ：通用寻址模式，用于访问内存中的任意位置。</li>
+                <li>jmpq：无条件跳转。</li>
+                <li>数组、类、union：</li>
+                <li>canray：防止缓冲区溢出攻击。</li>
+                <li>gadget：可以被用来构造攻击的小片段。</li>
+            </div>
+            <div id="goods">
+                <b>gcc优化</b>
+                <li>O1：进行常规优化，编译速度较慢，代码量一般。</li>
+                <li>O2：进行高度优化，编译速度较慢，代码量较少。</li>
+                <li>O3：进行最高优化，编译速度较慢，代码量最少。</li>
+                <li>-O：等同于-O2。</li>
+                <li>向量化编程：将一个循环中的多个操作合并为一个向量操作，比如循环访问一个数组，可以将多个元素同时存入向量寄存器，然后一次性计算。</li>
+                <li>循环展开：将一个循环展开为多个循环。</li>
+                <li>分支预测：通过分析代码的执行路径，提前预测执行的分支，guess！</li>
+                <li>缓存优化：将数据存放在缓存中。</li>
+                <li>Latency Bound：延迟绑定，即指令的执行时间与指令的输入数据量成正比。</li>
+                <li>vec Throughput Bound：向量化指令的吞吐量, 即处理器的每秒能执行的指令数, 与向量长度成正比。</li>
+            </div>
+            <div id="goods">
+                <b>内存</b>
+                <li><img src="./pic/memorys.png" style="height: 400px;width: auto;" alt=""></li>
+                <li>ALU：算术逻辑单元，负责执行算术运算和逻辑运算。</li>
+                <li>SSD：Solid State Drive，固态硬盘。</li>
+                <li>rotating disks：旋转式磁盘。</li>
+                <li>DRAM：dynamic random-access memory，动态随机存取存储器</li>
+                <li>SRAM：static random-access memory，静态随机存取存储器</li>
+                <li>cache：高速缓存，位于CPU和内存之间，用于存储最近访问过的数据。</li>
+                <li>miss or hit：缓存命中或未命中，缓存命中时，直接从缓存中读取数据，未命中时，需要从内存中读取数据（100倍时钟周期），然后存入缓存，再次访问时，直接从缓存中读取数据。</li>
+                <li>cache memory：S*E*B</li>
+                <li>memory mountain：<img src="./pic/memory_mountain.png" style="height: 400px;width: auto;" alt=""></li>
+            </div>
+            <div id="goods">
+                <b>链接</b>
+                <li>linkers最难调试，很难搞明白内部发生了什么：</li>
+                <li>gcc -Og test.cpp sum.cpp -lstdc++ -o test</li>
+                <li>默认：静态链接，但是会先分离编译为汇编文件，再链接。</li>
+                <li>静态链接：将目标文件中的代码和数据直接拷贝到可执行文件中，运行时不需要再进行链接。</li>
+                <li>动态链接：将目标文件中的代码和数据拷贝到内存，运行时再进行链接。</li>
+                <li>strong、weak、lazy：强（有初始化全局）、弱（无初始化全局）、延迟，静态链接时，强符号和弱符号的选择；动态链接时，只有强符号才会被加载。</li>
+                <li>-fno-common：当linkers遇到多个弱符号时，会报错，如果不加入该指令，则会选一个符号，并且有可能覆盖后面的变量；</li>
+                <li><b>所以要注意全局变量的初始化</b></li>
+            </div>
+        </div>
+
+        <div name="vim">
+            <p>Vim</p>
+            <div id="goods">
+                <b>插入</b>
+                <li>i：进入编辑模式，输入字符；</li>
+                <li>a：进入编辑模式，在光标后插入字符；</li>
+                <li>o：在当前行下方打开新行；</li>
+                <li>O：在当前行上方打开新行；</li>
+            </div>
+            <div id="goods">
+                <b>移动</b>
+                <li>hjkl：左下上右键，光标移动;</li>
+                <li>（number）+web：下个单词，单词end，单词begin；</li>
+            </div>
+            <div id="goods">
+                <b>删除</b>
+            </div>
+            <div id="goods">
+                <b>输入</b>
+                <li>number+i+...+esc：输入内容重复number次；</li>
+            </div>
+        </div>
+
+        <div name="fault">
+            <p>报错</p>
+            <div id="goods">
+                <b>典型</b>
+                <li>segmentation fault(分段错误)：程序试图访问非法的内存地址。</li>
+                <li>stack overflow(栈溢出)：程序调用函数时，栈的空间不足，导致溢出。</li>
+            </div>
+            <div id="goods">
+                <b>c++标准库异常类</b>
+                <li>std::bad_alloc：内存分配失败。</li>
+                <li>std::bad_cast：类型转换失败。</li>
+                <br>
+                <li>std::runtime_error：运行时错误。</li>
+                <li>std::overflow_error：数值运算结果溢出。</li>
+                <li>std::underflow_error：数值运算结果下溢出。</li>
+                <li>std::range_error：数学函数的结果超出定义域。</li>
+                <br>
+                <li>std::logic_error：逻辑错误。</li>
+                <li>std::domain_error：数学函数的参数不在定义域。</li>
+                <li>std::invalid_argument：函数的参数无效。</li>
+                <li>std::out_of_range：访问超出范围的元素。</li>
+                <li>std::length_error：容器的长度超过最大值。</li>
+            </div>
+        </div>
+
+        <div name="regex">
+            <p>正则表达式</p>
+            <div id="goods">
+                <b>基础</b>
+                <li>^：匹配字符串的开始；</li>
+                <li>$：匹配字符串的结束；</li>
+                <li>.*：匹配任意字符（包括换行符）；</li>
+                <li>+：匹配前面的字符1次或多次；</li>
+                <li>?：匹配前面的字符0次或1次；</li>
+                <li>[]：匹配括号中的字符；</li>
+                <li>{}：匹配前面的字符出现次数；</li>
+                <li>|()：匹配括号中的字符，或；</li>
+                <li>^：匹配字符串的开始；</li>
+                <li>$：匹配字符串的结束；</li>
+            </div>
+            <div id="goods">
+                <b>特殊</b>
+                <li>\d：匹配任意数字；</li>
+                <li>\D：匹配任意非数字；</li>
+                <li>\w：匹配任意字母、数字、下划线；</li>
+                <li>\W：匹配任意非字母、数字、下划线；</li>
+                <li>\s：匹配任意空白字符；</li>
+                <li>\S：匹配任意非空白字符；</li>
+                <li>\b：匹配单词边界；</li>
+                <li>\B：匹配非单词边界；</li>
+                <li>\n：匹配换行符；</li>
+                <li>\t：匹配制表符；</li>
+                <li>\r：匹配回车符；</li>
+                <li>\f：匹配换页符；</li>
+                <li>\a：匹配响铃符；</li>
+                <li>\e：匹配 escape 字符；</li>
+            </div>
+            <div id="goods">
+                <b>示例</b>
+                <li>phone_num：(\\()?(\\d{3})(\\))?([-. ])?(\\d{3})([-. ]?)(\\d{4})</li>
+                <li>^hello：匹配以hello开头的字符串；</li>
+                <li>world$：匹配以world结尾的字符串；</li>
+                <li>hello.*world：匹配hello后面任意字符，world前面任意字符的字符串；</li>
+                <li>hello+world：匹配hello后面至少一个字符，world前面任意字符的字符串；</li>
+                <li>hello?world：匹配hello后面0个或1个字符，world前面任意字符的字符串；</li>
+                <li>[a-z]：匹配任意小写字母；</li>
+                <li>[A-Z]：匹配任意大写字母；</li>
+                <li>[0-9]：匹配任意数字；</li>
+                <li>[^0-9]：匹配任意非数字；</li>
+                <li>hello\sworld：匹配hello后面至少一个空白字符，world前面任意字符的字符串；</li>
+                <li>hello\Sworld：匹配hello后面至少一个非空白字符，world前面任意字符的字符串；</li>
+                <li>hello\bworld：匹配hello后面和world前面都是单词边界的字符串；</li>
+                <li>hello\Bworld：匹配hello后面和world前面都不是单词边界的字符串；</li>
+            </div>            
+        </div>
+        <div name="cpp">
+            <p>C++</p>
+            <div id="goods">
+                <b>字符串</b>
+                <li>substr方法：string new_str = s.substr(pos, len)，拷贝从pos开始的len个字符到一个新的字符串。</li>
+                <li>replace方法：s = s.replace (size_t pos, size_t len, const string& str); 可结合s.find()方法，到达替换目标字符串。</li>
+            </div>
+            <div id="goods">
+                <b>STL容器</b>
+                <li>map：key-value对的集合，通过key查找value。</li>
+                <li>unordered_map：key-value对的集合，通过key查找value，不会根据key的大小进行排序。</li>
+                <li>set、map：插入、查找、删除的时间复杂度为O(logn);</li>
+                <li>unordered_set、unordered_map：插入、查找、删除的时间复杂度为O(1);</li>
+            </div>
+            <div id="goods">
+                <b>vector的小知识</b>
+                <li>emplace_back方法：在vector尾部直接创建元素，省去了push_back创建临时对象以及其移动或拷贝的步骤。</li>
+                <li>pop_back：与push_back相对应，删除vector尾部元素。</li>
+                <li>resize：resize(size_t new_size, const T& val)，调整vector的大小</li>
+                <li>assign：assign(size_t count, const T& val)，将vector所有元素赋值为val。</li>
+            </div>
+            <div id="goods">
+                <b>&的用法</b>
+                <li>取地址：int *p = &a，p指向a的地址。</li>
+                <li>引用（别名）：int &r = a，r是a的别名，可以直接用r来代替a。作为函数的参数，处理大块数据的传递（有同样的作用的便是指针）；</li>
+                <li>常引用：const int &cr = a，cr是a的常引用，通过修改a的值来修改cr，提高安全性，<b>注意：</b>引用作为函数的参数时尽量使用常引用；</li>
+                <li>作为函数的返回：int &Func(){}，在内存中不产生返回值的临时变量，但是不能返回函数局部变量</li>
+            </div>
+        </div>
+
+
         <div class="backtop">
             <img src="../pic/backtop.png" alt="" height="100px">
         </div>

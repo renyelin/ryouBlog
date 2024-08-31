@@ -11,7 +11,7 @@
         <link rel="icon" href="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../css/goods.css">
+        <link rel="stylesheet" href="../css/goods.css">
         <link rel="stylesheet" href="../css/picture.css">
         <link rel="stylesheet" href="../css/searchButton.css">
     </head>
@@ -29,6 +29,12 @@
 
         <b style="font-size: 100px;">ryouの杂七杂八</b>
         <div id="goods"></div>
+        <div id="goods">
+            <b>网页查看源代码</b>
+            <li>view-source（ctrl+u）：是未经过js修饰的，和请求到的代码是一样的；</li>
+            <li>检查：是经过加载过部分js的代码，是展现给用户真正的源码；</li>
+            <li>Network标签页：preserve log（）、disable cache（防止本地取数据），Doc-->Response也是源码</li>
+        </div>
         <div id="goods">
             <b>H.264（MP4）编码原理</b>
             <li>H.264解码：I帧（关键帧）、P帧、B帧，YUV色彩模型，差值算法</li>   
@@ -75,25 +81,79 @@
             <li>.top：国际域名，可以用于任何组织和个人</li>
         </div>
         <div id="goods">
-            
+            <b>了解VPN</b>
+            <li>Virtual Private Network</li>
+            <li>将专用网络延伸到公共网络上，使用户能够在共享或公共网络上发送和接收数据，就像他们的计算设备直接连接到专用网络上一样。</li>
+            <li>举例：两个物理距离很远的局域网互相传输信息，直接拉物理专线很费钱，用互联网（Internet）又不安全，而VPN安全可靠。</li>
+            <li>不同的分类：1.租用运营商————MPLS VPN;企业自建————IPSec VPN、L2TP VPN、SSL VPN等。<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2.远程访问VPN（出差员工拨号接入）：L2TP VPN、SSL VPN；局域网之间（两个公司异地机构）：MPLS VPN、IPSec VPN等。
+                &emsp;&emsp;&emsp;&emsp;
+            </li>
+            <li>。。。。。。</li>
+
         </div>
         <div id="goods">
-            
+            <b>Elastic Search(ES)</b>
+            <li>一个开源的搜索引擎，是数据和应用之间的中间层</li>
+            <br>
+            <li>倒排索引（Inverted Index）：分词+字典序 （term dictionary）+二分查找</li>
+            <li>但是term dictionary的数据量很大，不能放在内存里，放在磁盘里，而磁盘的查询速度很慢</li>
+            <li>优化磁盘搜索：目录树（trem Index）</li>
+            <li>Segment：最小的搜索单元，组成：Inverted Index + Term Index + Stored Fields（存放文档原始信息） + Doc Values(一种列式存储结构)</li>
+            <li>由于Segment一改全改，就不允许改，直接生成新的Segment,当Segment过多，就进行合并</li>
+            <li>于是我们得到了一个搜索库：Lucene</li>
+            <li>再通过一系列的优化，如分片等，最终形成一个高性能、高扩展性、高可用、支持持久化的分布式搜索引擎：ES</li>
+            <li>各个语言都有通过http对ES的接口</li>
         </div>
         <div id="goods">
-            
+            <b>GiB和GB的区别</b>
+            <li>GiB：giga binary byte(缩写为gibibyte)，与MiB和KiB的换算为1024</li>
+            <li>GB：giga byte，与MB和KB的换算为1000，是十进制</li>
+            <li>1GB = 1000*1000*1000 byte = 1000*1000*1000/(1024*1024*1024) GiB = 0.9313225746154785GiB</li>
+            <li>所以，一个64GB的硬盘只有59.6GiB（因为是外存，没有严格要求）</li>
         </div>
         <div id="goods">
-            
+            <b>cmd，powershell，shell，bash的区别</b>
+            <li>cmd：命令行解释器，是DOS系统的命令行环境，是DOS命令的集合，是Windows系统的默认命令行解释器。</li>
+            <li>powershell：微软推出的基于.NET Framework的命令行解释器，是Windows系统的默认命令行解释器。</li>
+            <li>shell：命令行接口，是一种命令行解释器，它是操作系统提供的用户接口，用户通过它可以与操作系统进行交互。</li>
+            <li>bash：Bourne Again Shell，是一种Unix shell和命令语言，是Linux系统的默认命令行解释器。</li>
         </div>
         <div id="goods">
-            
+            <b>文件后缀</b>
+            <li>.o：目标文件，编译生成的文件</li>
+            <li>.a：静态库文件，存放多个目标文件的集合</li>
+            <li>.so：动态库文件，运行时链接库</li>
+            <li>.text：代码段，存放指令</li>
+            <li>.data：数据段，存放初始化的全局变量和静态变量</li>
+            <li>.bss：未初始化的全局变量和静态变量</li>
+            <li>.symtab：符号表，存放符号和符号的相关信息</li>
+            <li>.rel.text：重定位表，存放重定位信息</li>
+            <li>.rodata：只读数据段，存放只读数据</li>
         </div>
         <div id="goods">
-            
+            <b>gdb</b>
+            <li>退出：quit、ctrl+d</li>
         </div>
         <div id="goods">
-            
+            <b>命令行 (mainly gcc)</b>
+            <li>objdump -d xxx.o：反汇编</li>
+            <li>gdb xxx：调试程序</li>
+            <li>汇编：gcc -S test.cpp</li>
+            <li>-Og：优化等级，-O1最快，-O3最慢，-Os最小化代码大小</li>
+            <li>-o xxx：指定输出文件名</li>
+            <li>-lstdc++：链接c++标准库，-lxxx：链接xxx库，（g++会自动链接标准库）</li>
+            <li>gcc -o test test.c -lm：链接math.h库</li>
+            <li>gcc -o test test.c -I/usr/include/xxx：指定头文件目录</li>
+            <li>gcc -o test test.c -L/usr/lib/xxx：指定库文件目录</li>
+            <li>gcc -o test test.c -Wl,-rpath=/usr/lib/xxx：指定运行时链接目录</li>
+            <li>gcc -o test test.c -static：静态链接</li>
+            <li>gcc -o test test.c -shared：动态链接</li>
+        </div>
+        <div id="goods">
+            <b>连分数</b>
+            <li>最简连分数：圆周率、欧拉常数、根号2、</li>
+            <li>最简连分数表示：a=[a0;a1,a2,a3...]</li>
         </div>
         <div id="goods">
             

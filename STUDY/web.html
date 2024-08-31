@@ -36,6 +36,26 @@
             <li>http请求：请求行，请求头部，空行，请求数据<a href="pic/http1.png" target="_blank"><img src="pic/http1.png" title="http请求" /></a></li>
             <li>TCP的三次握手：SYN+ACK<a href="pic/TCP.png" target="_blank"><img src="pic/TCP.png" title="TCP的三次握手"/></a></li> 
         </div>
+
+        <div id="goods">
+            <b>HTTP状态码</b>
+            <li>1xx：指示信息，表示请求已接收，继续处理</li>
+            <li>2xx：成功，表示请求已被成功接收、理解、处理、或是被接受</li>
+            <li>3xx：重定向，表示需要进行附加操作以完成请求</li>
+            <li>4xx：客户端错误，表示请求包含语法错误或请求无法实现</li>
+            <li>5xx：服务器错误，表示服务器在处理请求的过程中发生了错误</li>
+        </div>
+
+        <div id="goods">
+            <b>JSON数据格式</b>
+            <li>作用：与JavaScript交互，实现前后端分离</li>
+            <li>语法：{key:value,key:value}</li>
+            <li>实质：就是一堆字符串</li>
+            <li>特点：轻量级，易于阅读，易于解析</li>
+            <li>示例：{"name":"张三","age":25,"city":["上海","广州"]}</li>
+            <li>用法：var obj = JSON.parse(jsonStr)，将json字符串转换为对象</li>
+            <li>用法：var jsonStr = JSON.stringify(obj)，将对象转换为json字符串</li>
+        </div>
         
         <div class="backtop">
             <img src="../pic/backtop.png" alt="" height="100px">

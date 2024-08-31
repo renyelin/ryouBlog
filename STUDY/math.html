@@ -99,11 +99,25 @@
                 <li>右手坐标系</li>
                 <li>证明三个向量共面：(<b>a</b> ⨯ <b>b</b>) · <b>c</b> = 0</li>
                 <li>平面方程表达式：
-                  <li>点法式：A(x-x<small>0</small>) + B(y-y<small>0</small>) + C(z-z<small>0</small>) = 0</li>
-                  <li>一般式：Ax + By + Cz + D = 0</li>
-                  <li>截距式：<math><mfrac><mtext>x</mtext><mtext>a</mtext></mfrac></math> + <math><mfrac><mtext>y</mtext><mtext>b</mtext></mfrac></math> + <math><mfrac><mtext>z</mtext><mtext>c</mtext></mfrac></math> = 1</li>
-                  <li></li>
+                  点法式：A(x-x<small>0</small>) + B(y-y<small>0</small>) + C(z-z<small>0</small>) = 0 <br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;一般式：Ax + By + Cz + D = 0 <br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;截距式：<math><mfrac><mtext>x</mtext><mtext>a</mtext></mfrac></math> + <math><mfrac><mtext>y</mtext><mtext>b</mtext></mfrac></math> + <math><mfrac><mtext>z</mtext><mtext>c</mtext></mfrac></math> = 1 <br>
                 </li>
+                <li>点面距离公式形式和点线一致</li>
+                <li>空间曲线切向量：xyz三个方向关于t（或者x）的导数，用于切线方程、切平面方程</li>
+                <li>空间曲面法向量：xyz三个方向的各自偏导数（梯度），用于切平面方程、法线方程</li>
+
+            </div>
+            <div id="goods">
+              <b>一些基础解题模板，不会不行，不懂就不懂，用就对了😥</b>
+              <li>求二元函数极值：两个偏函数等于零 求出驻点，分别在每个驻点上 ———— A = f<sub>xx</sub>(x<sub>0</sub>,y<sub>0</sub>)，B = f<sub>xy</sub>(x<sub>0</sub>,y<sub>0</sub>)，C = f<sub>yy</sub>(x<sub>0</sub>,y<sub>0</sub>)，B<sup>2</sup>-AC < 0，则有极值，其中A>0则为极小值。</li>
+              <li>链式法则的熟练运用：换元，一些证明题，尤其是那个u = 根号下x^2+y^2 这玩意，它的偏导可以表示成 x/u</li>
+              <li>级数求和函数：二话不说，先求导或者积分，尤其注意e<sup>x</sup>x = （求和）x<sup>n</sup>/n!，看到 n! 就要想泰勒公式</li>
+              <li>证明收敛：拆分成收敛，比较（直接放缩 或者 用比值与0比较）（p级数，1/n是发散），积分（积分有上界），比值（下一项和这一项比值 的极限小于1），根值（比1小发散）</li>
+            </div>
+            <div id="goods">
+              <b>一些个人解题思想，🫥🪽</b>
+              <li>第一，不要畏难，其实积分的很多题和高中导数的一些题型很相似，只是积分看着很大一坨，实际上先把问题拆分来看，积分只是其中的一环，其他的在高中的时候你就会了。</li>
             </div>
             <div id="goods">
                 <b>全增量、全微分</b>
@@ -125,7 +139,19 @@
                 <li><a href="https://www.zhihu.com/question/26966355/answer/154857139">全导数，偏导数，方向导数</a></li>
             </div>
             <div id="goods">
-                <b>格林公式</b>
+              <b>二重积分和三重积分</b>
+              <li>直角坐标系和极坐标系，dxdy=r drdθ，dxdydz=r^2 sinφ drdθdφ</li>
+              <li>第一类曲线积分：ds = 根号下（ 两个关于t的函数的导数 的平方和） * dt </li>
+              <li>平面第二类曲线积分：参数法（转化为t的定积分）：Pdx + Qdy = { P(t) * (关于t的x函数的导数) + Q（t） * （关于t的y函数的导数） } * dt <br><br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;极坐标：ds = 根号下（ 关于θ的r函数的平方 和 关于θ的r函数的导数的平方 之和） * dθ<br><br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;格林公式:（L封闭、分段光滑、有向，P、Q具有一阶连续偏导）Pdx + Qdy = { (Q关于x的偏导)  - （P关于y的偏导） } * dxdy <br><br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;路径无关定理：不就是格林公式延展的特殊情况（不封闭，但是等式右边为0）吗，此时Pdx + Qdy 具有原函数u（x，y）<br><br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;联系第一类曲线积分：Pdx + Qdy = { Pcosa + Qcosb } * ds <small>【cosa = （x关于t的函数导数 除以 根号下的各方向的关于t的函数导数的平方和）】</small><br><br></li>
+              <li>空间第二类曲线积分：参数法（就是变成三个而已），或者斯托克斯公式转化为曲面积分（封闭曲线 or 添加辅助线）</li>
+              <li>第一类曲面积分：投影法：<b>F</b>(x,y,z)dv = f(x,y,z(x,y)) * (根号下 1 + z关于x的偏导数的平方 + z关于y的偏导数的平方) * dxdydz</li>
+              <li>第二类曲面积分：投影法：<b>F</b>(x,y,z)dv = ( Pcosa + Qcosb +Rcosc ) dv = Pdydz + Qdxdz + Rdxdy <br><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;高斯公式：封闭 分片光滑 外侧 一阶连续偏导数，和格林公式的区别就是全是加法（都是没有的那个微分的偏导）<br><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;联系第一类曲面积分：前面有，转换投影（？）</li>
             </div>
             <div id="goods">
                 <b>散度与旋度（向量分析）</b>
@@ -182,8 +208,11 @@ y''+py'+qy=f\left( x \right)
             <li>引力<a href=""></a></li>
             </div>
             <div id="goods">
-                <b>物理学应用</b>
-                <li></li>
+                <b>大学物理</b>
+                <li>第一：积分思想</li>
+                <li>第二：三维高度</li>
+                <li>第三：不懂装懂</li>
+                <li>第四：类比高中</li>
             </div>
             <div id="goods">
                 <b>级数</b>
@@ -241,7 +270,7 @@ y''+py'+qy=f\left( x \right)
         <div id="math4">
             <p>离散数学</p>
             <div id="goods">
-                <b>命题逻辑</b>
+                <b>命题</b>
                 <li>
                     常用命题定律表达式：<div id="editormd1"><textarea style="display: none;">
 - P → Q ⇔ ¬Q → ¬P ⇔ ¬P V Q
@@ -255,26 +284,94 @@ y''+py'+qy=f\left( x \right)
 - A ⇔ B 当且仅当 A ↔ B是永真式
 - P ⇒ Q (P蕴含Q) 当且仅当 P → Q是永真式
                 </textarea></div></li>
-                <li>
-                    对偶与范式：<div id="editormd3"><textarea>
-
-                </textarea></div></li>
-                <li>
-                    推理理论：<div id="editormd4"><textarea>
-
-                    </textarea></div></li>
             </div>
             <div id="goods">
-                <b>谓词逻辑</b>
-                <li>
-                    
+                <b>逻辑</b>
+                <li>逻辑推理<div id="editormd3"><textarea>
+- T(序号)I：推理成立，是包含关系；
+- T(序号)E：等价；
+- ES：存在指定，将一个存在命题指明对象（即将x替换为a）；
+- US：全称指定，将一个全称命题指明对象（即x替换为a，该a在题目中一般为ES所指定的a）；
+- EG：存在推广，（a替换为x，加上存在符号）；
+- UG：全称推广，（a替换为x，加上全称符号）。
+                </textarea></div>
                 </li>
+            </div>
+            <div id="goods">
+              <b>集合论基础</b>
+              <li>两个集合相等 ⇔ 互为子集（证明题常用）</li>
+              <li>有限集合A有n个元素 ⇔ 幂集有2^n个元素</li>
+              <li>集合的运算：<b>·</b>  分配律成立 <br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>·</b> A - B = A ⋂ ~B <br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>·</b> A - B = A - (A ⋂ B)</li>
+              <li>序偶和笛卡尔积：A ⨯ B = (序偶的前一项是A元素，后一项是B元素)</li>
+              <li>称I<small>x</small>是X上的恒等关系{〈x,x〉| ∀x∈X}</li>
+              <li>二分图</li>
+              <li>自反，对称，传递，反自反（对角线全为零），反对称（不存在反向弧线，只有单向弧线）</li>
+              <li>复合关系和逆关系：R ∘ S = {〈x,z〉| 懂的都懂 }；R<sup>c</sup> = {〈y,x〉| 懂的都懂 }</li>
             </div>
             <div id="goods">
               <b>关系的闭包运算</b>
                 <li>R自反，当且仅当r(R)=R</li>
                 <li>R对称，当且仅当s(R)=R</li>
                 <li>R传递，当且仅当t(R)=R</li>
+                <li>自反闭包、对称闭包、传递闭包：就是最小的满足自反、对称、传递的反包含的关系集合</li>
+            </div>
+            <div id="goods">
+              <b>等价和序</b>
+              <li>等价关系：一个在集合A上的关系R自反、对称、传递，（就证明用的，但其实也可以理解为字面意思，经典就是同余关系）；</li>
+              <li>等价类：就是A上做划分，每个划分之间独立（分别自反、对称、传递闭包）。</li>
+              <li>偏序关系：就是反对称的一半等价关系，（比如 小于 这种关系，只有一半）；</li>
+              <li>序偶〈A,≼〉称作偏序集，如果再盖住（一坨变一串），就可以画哈斯图了。</li>
+            </div>
+            <div id="goods">
+              <b>哈斯图</b>
+              <li>上界：对于上界里的元素都是（非严格，即可以是本身）大于所选集合的元素</li>
+              <li>上确界：最小上界（唯一）</li>
+            </div>
+            <div id="goods">
+              <b>函数</b>
+              <li>定义：dom<i>f</i> = A，ran<i>f</i> ⊆ B，入射（单射，一对一）+满射（ran<i>f</i> = B）=双射；</li>
+              <li>逆函数：前提就是必须是双射（因为上面的规定），记作<i>f</i> <sup>c</sup>（或者 <i>f</i> <sup>-1</sup>），ran和dom反过来。</li>
+              <li>复合函数：g∘f(x)=g(f(x))，即先做f，再做g；</li>
+            </div>
+            <div id="goods">
+              <b>代数系统之基本</b>
+              <li>运算三性质：可交换、可结合、可分配、（可吸收、等幂）</li>
+              <li>运算*对于运算+是可分配的，即：a*(b+c)=a*b+a*c，可见———可分配就是把可分配的那个运算一分为二，中间保持不变</li>
+              <li>幺元（幺在左就叫左）、零元、逆元（x<sup>-1</sup>）</li>
+              <li>一个二元运算可结合，有幺元，每个元素有左逆元，那么左逆元也是右逆元，且逆元唯一</li>
+              <li>运算表：<b>左在左，右在上</b></li>
+              <li>广群（封闭）————>半群（可结合广群）————>独异点（含幺半群）————>群（全有逆元独异点）</li>
+              <li>群————>阿贝尔群（可交换群）————>循环群（生成元a，a经过|G|次运算后仍等于a，且经过每一个元素，循环就是字面意思，其实只就见过加法类运算）</li>
+              <li><b>做抽象证明题吧，就是要多假设，要多设未知的，要多设反结论（反证法）</b></li>
+            </div>
+            <div id="goods">
+              <b>群</b>
+              <li><b><a href="https://www.bilibili.com/video/BV1PM411g7o8/?spm_id_from=autoNext&vd_source=3d527a72ef33c82b6908a54f540d4ae5">这是一个群论入门视频的链接</a></b></li>
+              <li>n阶循环群G：n=|G|</li>
+              <li>有限半群必存在等幂元：a*a=a（记住就行，难得推），如果这个a是幺元，就是含幺半群（独异点）</li>
+              <li>含幺半群里的逆元：a有逆元，那么(a<sup>-1</sup>)<sup>-1</sup> = a（其实就是显而易见的a<sup>-1</sup>的逆元是a，左右互相都满足），不仅如此，a和b运算后的逆元 = b的逆元和a的逆元相运算，（这不就置换矩阵吗）</li>
+              <li>群：易知没有零元<div id="editormd4"><textarea>
+- 运算必封闭
+- 运算可结合
+- 必存在幺元
+- 均存在逆元
+              </textarea></div>
+            </li>
+            <li>klein四元群：唯一四元不循环群</li>
+            <li>集合的积和逆：就把里面的元素的积和逆，记作AB，A<sup>-1</sup></li>
+            <li>陪集：单个元素在左就叫左陪集，aH，其中H是G的子集，意思就是a和H里的元素全算一边之后的集合</li>
+            <li>拉格朗日定理：推不了一点，就是aH其实是以a为代表元素的G上的一个等价关系，而且|G|=k|H|，很神奇吧，群的元素个数是子群的整数倍</li>
+            <li>由上面还可以得到一个神奇的东西：质数阶的群，它的子群只有 只包含幺元e的群 和 它本身 （有人给这玩意不知道为什么取了个名字叫 平凡子集）</li>
+            <li>还有：质数阶的群，因为只有非平凡子集，所以必定是循环群（证明：由a生成的循环群必定是群G的子群，G的子群就是本身嘛，难道是{e😆}？）</li>
+            </div>
+            <div id="goods">
+              <b>图的基本相关概念</b>
+              <li>点连通度：k（G）是为了产生一个不连通图需要删去的点的最少数</li>
+              <li>边连通图：同上</li>
+              <li>稠密图：</li>
+              <li>稀疏图：</li>
             </div>
             <div id="goods">
                 <b>平面图</b>
