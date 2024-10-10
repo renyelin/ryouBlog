@@ -39,11 +39,11 @@
         </form>
 
 
-        <b class="header" style="font-size: 100px;">ryouのmath废料</b>
-        <div id="goods">导航：<a href="#math1" target="_self">高数</a>、<a href="#math2" target="_self">线性代数</a>、<a href="#math3" target="_self">概率论</a>、<a href="#math4" target="_self">离散数学</a>、<a href="#math5" target="_self">计算方法</a></div>
-        <div name="math1">
+        <b class="header" style="font-size: 100px;"><a href="../index.html" target="_self" style="color: #000;">ryou</a>のmath废料</b>
+        <div class="goods">导航：<a href="#math1" target="_self">高数</a>、<a href="#math2" target="_self">线性代数</a>、<a href="#math3" target="_self">概率论</a>、<a href="#math4" target="_self">离散数学</a>、<a href="#math5" target="_self">计算方法</a></div>
+        <div id="math1">
             <p>高等数学</p>
-            <div id="goods">
+            <div class="goods">
                 <b>重点难点积分公式</b>
                 <li><a href="https://zh.wikipedia.org/wiki/%E7%A7%AF%E5%88%86%E8%A1%A8">如你所见，这是一个链接：https://zh.wikipedia.org/wiki/积分表</a></li>
                 <li>常用积分公式：
@@ -88,13 +88,13 @@
 <b>三角变换，x=a·tan y</b>
                     </textarea></div></li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>等价无穷小</b>
                 <li>当x → 0，<img style="height: 400px;width: auto;" src="pic\math6.png" /></li>
                 <li>用处：洛必达法则（在极限存在的情况下，分子分母都无穷小或无穷大，则分子分母同时分别求导），</li>
                 <li>大多可用taylor公式（taylor公式：f(x) = f(0) + f'(0)x + f''(0)/2!x^2 + ... + O(x^n)）</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>空间解析几何</b>
                 <li>右手坐标系</li>
                 <li>证明三个向量共面：(<b>a</b> ⨯ <b>b</b>) · <b>c</b> = 0</li>
@@ -108,37 +108,37 @@
                 <li>空间曲面法向量：xyz三个方向的各自偏导数（梯度），用于切平面方程、法线方程</li>
 
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>一些基础解题模板，不会不行，不懂就不懂，用就对了😥</b>
               <li>求二元函数极值：两个偏函数等于零 求出驻点，分别在每个驻点上 ———— A = f<sub>xx</sub>(x<sub>0</sub>,y<sub>0</sub>)，B = f<sub>xy</sub>(x<sub>0</sub>,y<sub>0</sub>)，C = f<sub>yy</sub>(x<sub>0</sub>,y<sub>0</sub>)，B<sup>2</sup>-AC < 0，则有极值，其中A>0则为极小值。</li>
               <li>链式法则的熟练运用：换元，一些证明题，尤其是那个u = 根号下x^2+y^2 这玩意，它的偏导可以表示成 x/u</li>
               <li>级数求和函数：二话不说，先求导或者积分，尤其注意e<sup>x</sup>x = （求和）x<sup>n</sup>/n!，看到 n! 就要想泰勒公式</li>
               <li>证明收敛：拆分成收敛，比较（直接放缩 或者 用比值与0比较）（p级数，1/n是发散），积分（积分有上界），比值（下一项和这一项比值 的极限小于1），根值（比1小发散）</li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>一些个人解题思想，🫥🪽</b>
               <li>第一，不要畏难，其实积分的很多题和高中导数的一些题型很相似，只是积分看着很大一坨，实际上先把问题拆分来看，积分只是其中的一环，其他的在高中的时候你就会了。</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>全增量、全微分</b>
                 <li>在微积分中，函数f在某一点的全微分（英语：total derivative）是指该函数在该点附近关于其自变量的最佳线性近似。与偏微分不同，全微分反映了函数关于其所有自变量的线性近似，而非单个自变量。</li>
                 <li>全微分可以看成是把单变量函数的微分推广到多变量函数上：单变量函数的全微分与其微分相同；而多变量函数在某点的全微分为一线性映射，通常可用<b>矩阵或向量</b>表示。</li>
                 <li>充分条件：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4aa70292f5163b2970512236df163523facd9ecc" alt=""></li>
                 <li>必要条件：对于二元函数，在该点可微，则在该点的全微分为：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/586865355c112fa118e1b149ad31a24a23b78ee1" alt=""></li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>链式法则</b>
                 <li><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/faecaadc0efc1c583206cdf003051e4206f76cd1" alt=""></li>
                 <li><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2db137f3d7ab9c38df54fe96f0beb1272cecdc69" alt=""></li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>方向导数和梯度</b>
                 <li>方向导数：偏导数的推广，表示某一函数沿着某一方向的变化率。<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2f4e2edbfad07fc6ff2b85870bb7c5324a084211" alt="directional derivative" title="方向导数"></li>
                 <li>梯度：其方向是在该点的最快增长方向，其量是在这个方向的增长率。<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eb792fff17ea6517a54075e24a6b3ab131ba3885"  alt="梯度公式" title="梯度"></li>
                 <li>利用方向导数描述梯度：函数f在P点的梯度<b style="color: black;font-weight: 1000;">grad</b> f是一个向量，它的方向是函数f变化最快的方向，它的模就是函数f在P点的方向导数最大值。</li>
                 <li><a href="https://www.zhihu.com/question/26966355/answer/154857139">全导数，偏导数，方向导数</a></li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>二重积分和三重积分</b>
               <li>直角坐标系和极坐标系，dxdy=r drdθ，dxdydz=r^2 sinφ drdθdφ</li>
               <li>第一类曲线积分：ds = 根号下（ 两个关于t的函数的导数 的平方和） * dt </li>
@@ -153,7 +153,7 @@
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;高斯公式：封闭 分片光滑 外侧 一阶连续偏导数，和格林公式的区别就是全是加法（都是没有的那个微分的偏导）<br><br>
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;联系第一类曲面积分：前面有，转换投影（？）</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>散度与旋度（向量分析）</b>
                 <li>散度与通量，旋度与环量</li>
                 <b>---------------------------</b>
@@ -168,7 +168,7 @@
                 <li>斯托克斯定理：<img id="link"  src="https://wikimedia.org/api/rest_v1/media/math/render/svg/66f17ab7e17b42628fa05426ae414331c4a2050a" alt=""><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4f5a48f98078d7d3bf47a0a894c2d1deca83d34c" alt=""></li>
                 <li>其旋度表示：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5dce42c3b8414d2d35aee01a54230600ae038252" alt=""></li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>微分方程</b>
                 <li>
                     <b>几种常见微分方程：</b><div id="editormd5"><textarea>
@@ -201,25 +201,25 @@ y''+py'+qy=f\left( x \right)
                     </textarea></div>
                 </li>
             </div>
-            <div id="goods">
+            <div class="goods">
             <b>重积分的应用</b>
             <li>质心<a href="pic/math1.png"><img src="pic/math1.png" alt="" title="质心"></a></li>
             <li>转动惯量<a href="pic/math2.png"><img src="pic/math2.png" alt="" title="转动惯量"></a></li>
             <li>引力<a href=""></a></li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>大学物理</b>
                 <li>第一：积分思想</li>
                 <li>第二：三维高度</li>
                 <li>第三：不懂装懂</li>
                 <li>第四：类比高中</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>级数</b>
                 <li>级数（英语：Series）是数学中一个有穷或无穷的序列之和，如果序列是有穷序列，其和称为有穷级数；反之，称为无穷级数（一般也简称为级数）。</li>
                 <li>柯西审敛准则（在一个<a href="https://zh.wikipedia.org/wiki/%E5%AE%8C%E5%A4%87%E7%A9%BA%E9%97%B4">完备空间</a>中）：对任意的<img id="link" style="height: 20px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/568095ad3924314374a5ab68fae17343661f2a71"/>，总存在<b>N0>0</b>，使得任意的<b>n>m>N0</b>，<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dc4ad6b1b8a04c5b5afcae526ca25e3357d300b9"></li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>调和级数</b>
                 <li>调和级数（英语：Harmonic series）: <img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/65256fdfa1fec9932b25e831fa1f6441f4a51e8c"/></li>
                 <li>比较审敛法：<a href="pic/math3.png"><img src="pic/math3.png" alt=""></a></li>
@@ -231,10 +231,10 @@ y''+py'+qy=f\left( x \right)
                 <li style="list-style-image: none;">p级数：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/14b722565fe15d97c09ebb6d6717f9ac02e08f40" alt="">，p<=1发散，p>1收敛（过饱和调和级数）（其和也就是<a href="https://zh.m.wikipedia.org/wiki/%E9%BB%8E%E6%9B%BC%CE%B6%E5%87%BD%E6%95%B8">黎曼ζ函数</a>在p的值）</li>
                 <li style="list-style-image: none;">随机调和级数：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/38e440bd646f0d25a7c45624bd1e3e4e2b546241" alt="">，其中分子是恒等分布的独立随机变量，取值范围为+1和-1，取这两值的概率都是0.5。该级数收敛的概率是1。</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>泰勒级数</b>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>傅里叶级数</b>
                 <li><img id="link" style="height: 100px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a18f45b6fd2a0a4e6e36f0c0ee6a94ddb219545f" alt=""></li>
                 <li><img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cdf731c3bf53631dd6196139da1d743adc0a5a79" alt=""></li>
@@ -242,7 +242,7 @@ y''+py'+qy=f\left( x \right)
         </div>
         <div id="math2">
             <p>线性代数</p>
-            <div id="goods">
+            <div class="goods">
                 <b>克拉默法则</b>
                 <li>方程组：<img id="link" style="height: 60px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9946f0492e9eb0c2a7a84983e267d6b51fb2099e" alt="">;<br>
                 &emsp;&emsp;当矩阵可逆时：解为<img id="link" style="height: 120px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f83d9832c809261e5c2d707d3f1aca635a1115bf" alt="">，<img id="link" style="height: 120px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dff330096abc66fd76ed5f9a71e63b6561e33c74" alt="">，<img id="link" style="height: 120px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ce39b2e5c430fb0a32d7685d3a9079c24d4ac195" alt="">
@@ -254,13 +254,13 @@ y''+py'+qy=f\left( x \right)
                 </li>
                 <li>缺点：难以实际用于计算，引入----><a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E6%B6%88%E5%8E%BB%E6%B3%95">高斯消元法</a>，用于计算机</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>计算机图形学入门的入门</b>
             </div>
         </div>
         <div id="math3">
             <p>概率论</p>
-            <div id="goods">
+            <div class="goods">
                 <b>正态分布</b>
                 <li>正态分布（normal distribution），物理学中通称高斯分布（Gaussian distribution），是一个非常常见的连续概率分布。</li>
                 <li>概率密度函数为：<img id="link" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6fa0f3778df769845a3862bd22921041c18dd79a" alt=""></li>
@@ -269,7 +269,7 @@ y''+py'+qy=f\left( x \right)
         </div>
         <div id="math4">
             <p>离散数学</p>
-            <div id="goods">
+            <div class="goods">
                 <b>命题</b>
                 <li>
                     常用命题定律表达式：<div id="editormd1"><textarea style="display: none;">
@@ -285,7 +285,7 @@ y''+py'+qy=f\left( x \right)
 - P ⇒ Q (P蕴含Q) 当且仅当 P → Q是永真式
                 </textarea></div></li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>逻辑</b>
                 <li>逻辑推理<div id="editormd3"><textarea>
 - T(序号)I：推理成立，是包含关系；
@@ -297,7 +297,7 @@ y''+py'+qy=f\left( x \right)
                 </textarea></div>
                 </li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>集合论基础</b>
               <li>两个集合相等 ⇔ 互为子集（证明题常用）</li>
               <li>有限集合A有n个元素 ⇔ 幂集有2^n个元素</li>
@@ -310,32 +310,32 @@ y''+py'+qy=f\left( x \right)
               <li>自反，对称，传递，反自反（对角线全为零），反对称（不存在反向弧线，只有单向弧线）</li>
               <li>复合关系和逆关系：R ∘ S = {〈x,z〉| 懂的都懂 }；R<sup>c</sup> = {〈y,x〉| 懂的都懂 }</li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>关系的闭包运算</b>
                 <li>R自反，当且仅当r(R)=R</li>
                 <li>R对称，当且仅当s(R)=R</li>
                 <li>R传递，当且仅当t(R)=R</li>
                 <li>自反闭包、对称闭包、传递闭包：就是最小的满足自反、对称、传递的反包含的关系集合</li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>等价和序</b>
               <li>等价关系：一个在集合A上的关系R自反、对称、传递，（就证明用的，但其实也可以理解为字面意思，经典就是同余关系）；</li>
               <li>等价类：就是A上做划分，每个划分之间独立（分别自反、对称、传递闭包）。</li>
               <li>偏序关系：就是反对称的一半等价关系，（比如 小于 这种关系，只有一半）；</li>
               <li>序偶〈A,≼〉称作偏序集，如果再盖住（一坨变一串），就可以画哈斯图了。</li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>哈斯图</b>
               <li>上界：对于上界里的元素都是（非严格，即可以是本身）大于所选集合的元素</li>
               <li>上确界：最小上界（唯一）</li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>函数</b>
               <li>定义：dom<i>f</i> = A，ran<i>f</i> ⊆ B，入射（单射，一对一）+满射（ran<i>f</i> = B）=双射；</li>
               <li>逆函数：前提就是必须是双射（因为上面的规定），记作<i>f</i> <sup>c</sup>（或者 <i>f</i> <sup>-1</sup>），ran和dom反过来。</li>
               <li>复合函数：g∘f(x)=g(f(x))，即先做f，再做g；</li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>代数系统之基本</b>
               <li>运算三性质：可交换、可结合、可分配、（可吸收、等幂）</li>
               <li>运算*对于运算+是可分配的，即：a*(b+c)=a*b+a*c，可见———可分配就是把可分配的那个运算一分为二，中间保持不变</li>
@@ -346,7 +346,7 @@ y''+py'+qy=f\left( x \right)
               <li>群————>阿贝尔群（可交换群）————>循环群（生成元a，a经过|G|次运算后仍等于a，且经过每一个元素，循环就是字面意思，其实只就见过加法类运算）</li>
               <li><b>做抽象证明题吧，就是要多假设，要多设未知的，要多设反结论（反证法）</b></li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>群</b>
               <li><b><a href="https://www.bilibili.com/video/BV1PM411g7o8/?spm_id_from=autoNext&vd_source=3d527a72ef33c82b6908a54f540d4ae5">这是一个群论入门视频的链接</a></b></li>
               <li>n阶循环群G：n=|G|</li>
@@ -366,14 +366,14 @@ y''+py'+qy=f\left( x \right)
             <li>由上面还可以得到一个神奇的东西：质数阶的群，它的子群只有 只包含幺元e的群 和 它本身 （有人给这玩意不知道为什么取了个名字叫 平凡子集）</li>
             <li>还有：质数阶的群，因为只有非平凡子集，所以必定是循环群（证明：由a生成的循环群必定是群G的子群，G的子群就是本身嘛，难道是{e😆}？）</li>
             </div>
-            <div id="goods">
+            <div class="goods">
               <b>图的基本相关概念</b>
               <li>点连通度：k（G）是为了产生一个不连通图需要删去的点的最少数</li>
               <li>边连通图：同上</li>
               <li>稠密图：</li>
               <li>稀疏图：</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>平面图</b>
                 <li>欧拉公式：点-边+面=2，v-e+f=2</li>
                 <li>常识：一个平面图的每个面都由至少 3 个边围成，且每个边仅触及 2 个面。即2e>=3f</li>
@@ -385,7 +385,7 @@ y''+py'+qy=f\left( x \right)
                 <li>华格纳定理（英语：Wagner's theorem）：一个简单图是平面图当且仅当它不是 K5 或 K3,3 的次图。<br>&emsp;&emsp;<small>其中，一个图的次图是将它做有限多次的取子图(删除部分顶点和边)和做边收缩(将某边缩成一个顶点)所得到的图。</small></li>
                 <li>对偶图：对偶图 G* 也是平版图，而且如果 G 是连通的，则 G** 与 G 在球面上是拓朴等价的。换句话说，他们是相同的平面映射。</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>一笔画问题（边或点）</b>
                 <li>哈密尔顿图（Hamiltonian graph）：图中从一个节点出发，经过每个顶点恰好一次，最后回到起点的回路。<br>
                     &emsp;&emsp;&emsp;&emsp;&emsp;<b>充分条件</b>：每一对结点度数之和>=n-1。
@@ -394,7 +394,7 @@ y''+py'+qy=f\left( x \right)
                     &emsp;&emsp;&emsp;&emsp;&emsp;<b>充要条件</b>：连通且所有结点度数为偶数。
                 </li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>树</b>
                 <li>二叉树：非空的二叉树，若树叶总数为 n0，分支度为2的总数为 n2，则 n0 = n2 + 1。[点=边+1（n=e+1），单枝点+2*双枝点=边（n1+2*n2=e）]</li>
                 <li>完全m叉树（树叶数t，分支点数i）：（m-1）i=t-1</li>

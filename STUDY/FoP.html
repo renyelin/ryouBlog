@@ -14,8 +14,9 @@
         <link rel="stylesheet" href="../css/goods.css">
         <link rel="stylesheet" href="../css/picture.css">
         <link rel="stylesheet" href="../css/searchButton.css">
+        <link rel="stylesheet" href="../css/navbar.css">
     </head>
-    <body>
+    <y>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -28,19 +29,19 @@
 
         
 
-        <b style="font-size: 100px;">ryouの花哨编程基础</b>
-        <div id="goods">导航：<a href="#shell">Shell</a></div>
-        <div name="shell">
+        <b style="font-size: 100px;"><a href="../index.html" target="_self" style="color: #000;">ryou</a>の花哨编程基础</b>
+        <div class="goods">导航：<a href="#shell">Shell</a>、<a href="#312">深入了解计算机系统</a>、<a href="#vim">Vim</a>、<a href="#fault">报错</a>、<a href="#cpp">C++</a>、<a href="#regex">正则表达式</a></div>
+        <div id="shell">
             <p>Shell</p>
-            <div id="goods"><b><a href="https://www.cnblogs.com/jing99/p/7309793.html" target="_blank">这是一个链接</a></b>、<b><a href="https://zh.wikipedia.org/wiki/%E6%AE%BC%E5%B1%A4" target="_blank">这也是一个链接</a></b></div>
-            <div id="goods">
+            <div class="goods"><b><a href="https://www.cnblogs.com/jing99/p/7309793.html" target="_blank">这是一个链接</a></b>、<b><a href="https://zh.wikipedia.org/wiki/%E6%AE%BC%E5%B1%A4" target="_blank">这也是一个链接</a></b></div>
+            <div class="goods">
                 <b>shell是啥</b>
                 <li>一般来说，Shell是指操作系统中提供访问内核所提供之服务的程序。Shell也用于泛指所有为用户提供操作界面的程序，也就是程序和用户交互的层面。因此与之相对的是内核（英语：Kernel），内核不提供和用户的交互功能。</li>
                 <li>Shell本身是一个用C语言编写的程序，它是用户使用Linux的桥梁。Shell既是一种命令语言，又是一种程序设计语言。</li>
                 <li>作为命令语言，它交互式地解释和执行用户输入的命令；作为程序设计语言，它定义了各种变量和参数，并提供了许多在高级语言中才具有的控制结构，包括循环和分支。</li>
                 <li>Shell有两种执行命令的方式：交互式（Interactive）和批处理（Batch）。</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>shell脚本解释器</b>
                 <li>Shell是一种脚本语言，那么，就必须有解释器来执行这些脚本。</li>
                 <li>常见的Shell解释器有bash、csh、ksh、zsh等。</li>
@@ -48,21 +49,38 @@
             </div>
         </div>
 
-        <div name="512">
-            <p>深入了解计算机系统</p>
-            <div id="goods">
+        <div id="312">
+            <div class="navbar">
+                <p>深入了解计算机系统</p>
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <ul>
+                    <li><a href="#assembly_language">汇编语言</a>&emsp;|</li>
+                    <li><a href="#gcc_optimization">gcc优化</a>&emsp;|</li>
+                    <li><a href="#memory">内存</a>&emsp;|</li>
+                    <li><a href="#linkers">链接器</a>&emsp;|</li>
+                    <li><a href="#exception_control_flow">异常控制流</a>&emsp;|</li>
+                    <li><a href="#I/O">I/O</a>&emsp;|</li>
+                    <li><a href="#virtual_memory">虚拟内存</a></li>
+                </ul>
+            </div>
+            <div class="goods">
                 <b>int、unsigned、float、double...</b>
                 <li><img src="./pic/numeric_ranges.png" style="height: 400px;width: auto;" alt=""></li>
                 <li><img src="./pic/conversion_visualize.png" style="height: 400px;width: auto;" alt=""></li>
                 <li>位移：1个时钟周期；乘法：数个时钟周期；除法：30个时钟周期；</li>
                 <li>big endian、little endian：字节序，大端序是高位字节排放在内存低地址端，小端序是低位字节排放在内存低地址端。</li>
                 <li>小数：<img src="./pic/float.png" style="height: 400px;width: auto;" alt=""></li>
+                <li>乘法的底层实现：</li>
+                <li>除法的底层实现：</li>
             </div>
-            <div id="goods">
+            <div class="goods" id="assembly_language">
                 <b>汇编语言</b>
                 <li>算术指令：leaq、addq、subq、andq、orq... （q：quadword 四字）（sd:single double doubleword 单双字）(apd:add packed doubleword 加包双字)</li>
                 <li>寄存器：%rax、%rbx、%rcx、%rdx、%rsi、%rdi（数组基指针）、%rsp（栈指针）、%rbp(基指针)、%rip（指令指针）、%r8~%r15</li>
                 <li>寄存器：%xmm0~%xmm15(浮点数寄存器，128位)，%ymm0~%ymm15(浮点数寄存器，256位)，%zmm0~%zmm31(浮点数寄存器，512位)</li>
+                <li>系统调用号：%eax、%ebx、%ecx、%edx、%esi、%edi、%ebp、%esp、%eip</li>
                 <li>条件码：%cf、%zf、%sf、%of</li>
                 <li>条件循环：（goto语句）loop:... goto loop，（汇编指令）.L2: ... j() .L2；j()为jump，()为条件</li>
                 <li>callq：调用函数，返回地址存入栈顶，返回地址指向下一条指令。</li>
@@ -73,7 +91,7 @@
                 <li>canray：防止缓冲区溢出攻击。</li>
                 <li>gadget：可以被用来构造攻击的小片段。</li>
             </div>
-            <div id="goods">
+            <div class="goods" id="gcc_optimization">
                 <b>gcc优化</b>
                 <li>O1：进行常规优化，编译速度较慢，代码量一般。</li>
                 <li>O2：进行高度优化，编译速度较慢，代码量较少。</li>
@@ -86,20 +104,21 @@
                 <li>Latency Bound：延迟绑定，即指令的执行时间与指令的输入数据量成正比。</li>
                 <li>vec Throughput Bound：向量化指令的吞吐量, 即处理器的每秒能执行的指令数, 与向量长度成正比。</li>
             </div>
-            <div id="goods">
+            <div class="goods" id="memory">
                 <b>内存</b>
                 <li><img src="./pic/memorys.png" style="height: 400px;width: auto;" alt=""></li>
+                <li>Disk：比DRAM慢10,000倍</li>
+                <li>DRAM：dynamic random-access memory，动态随机存取存储器，比SRAM慢10倍。</li>
+                <li>SRAM：static random-access memory，静态随机存取存储器</li>
                 <li>ALU：算术逻辑单元，负责执行算术运算和逻辑运算。</li>
                 <li>SSD：Solid State Drive，固态硬盘。</li>
                 <li>rotating disks：旋转式磁盘。</li>
-                <li>DRAM：dynamic random-access memory，动态随机存取存储器</li>
-                <li>SRAM：static random-access memory，静态随机存取存储器</li>
                 <li>cache：高速缓存，位于CPU和内存之间，用于存储最近访问过的数据。</li>
                 <li>miss or hit：缓存命中或未命中，缓存命中时，直接从缓存中读取数据，未命中时，需要从内存中读取数据（100倍时钟周期），然后存入缓存，再次访问时，直接从缓存中读取数据。</li>
                 <li>cache memory：S*E*B</li>
                 <li>memory mountain：<img src="./pic/memory_mountain.png" style="height: 400px;width: auto;" alt=""></li>
             </div>
-            <div id="goods">
+            <div class="goods" id="linkers">
                 <b>链接</b>
                 <li>linkers最难调试，很难搞明白内部发生了什么：</li>
                 <li>gcc -Og test.cpp sum.cpp -lstdc++ -o test</li>
@@ -109,40 +128,146 @@
                 <li>strong、weak、lazy：强（有初始化全局）、弱（无初始化全局）、延迟，静态链接时，强符号和弱符号的选择；动态链接时，只有强符号才会被加载。</li>
                 <li>-fno-common：当linkers遇到多个弱符号时，会报错，如果不加入该指令，则会选一个符号，并且有可能覆盖后面的变量；</li>
                 <li><b>所以要注意全局变量的初始化</b></li>
+                <br>
+                <li>relocation entry：重定位条目</li>
+                <li>共享库：动态链接库，可以被多个程序共享。</li>
+                <li>库打桩：将程序中的函数替换为自己的函数，以达到调试目的。</li>
+            </div>
+            <div class="goods" id="exception_control_flow">
+                <b>异常控制流</b>
+                <li>ECF：异常控制流，是指程序在运行过程中，出现异常或错误时，如何处理，以保证程序的正常运行。</li>
+                <li>异常：将控制权从用户代码交给操作系统内核态中的代码</li>
+                <li>内核：内核内存受保护，对用户程序不可用</li>
+                <li>异步异常（Asynchronous Exception(中断)）：由硬件或软件引起的异常，如时钟中断、网络错误、磁盘错误等。</li>
+                <li>同步异常：由程序自己引起的异常，如除零错误、数组越界等。</li>
+                <li>system call：系统调用，是用户态到内核态的接口，是操作系统提供给用户程序的接口: <br><img src="./pic/system_call.png" style="height: 400px;width: auto;" alt=""></li>
+                <br>
+                <li>页缺失：当程序访问的内存页不在内存中时，产生的异常，<br>&emsp;&emsp;<b>return:</b> <img src="./pic/page_fault.png" style="height: 300px;width: auto;" alt="">&emsp;&emsp;<b>no return:</b> <img src="./pic/page_fault2.png" style="height: 300px;width: auto;" alt=""></li>
+                <li>multiprocessing时的CPU上下文切换：保存当前进程的CPU上下文，加载另一个进程的CPU上下文。</li>
+                <li>并发（currency）: </li>  
+                <br>
+                <li>getpid(): 获取当前进程的ID</li>  
+                <li>getppid(): 获取父进程的ID</li>  
+                <li>fork(): 创建子进程, (windows没有), 调用一次返回两次，父子进程各有一个pid</li>  
+                <li>execve(char *filename, char *argv[], char *envp[]): 加载并运行一个新的程序，例如：execve("/bin/ls", NULL, NULL)，返回值小于0，会报错指令不存在;</li>  
+                <li>wait(int *child_status): 等待子进程结束</li>  
+                <li>exit(int status): 退出程序, status为退出状态，父进程退出，子进程不会退出。</li>  
+            </div>
+            <div class="goods" id="I/O">
+                <b>I/O</b>
+                <li><img src="./pic/kinds_IO.png" alt="" style="height: 200px;width: auto;"></li>
+                <li>ssize_t: 读写操作的返回值类型，ssize_t是一种带符号的整型，它可以表示一个带符号的整数类型，一般用于表示读写操作的字节数。</li>
+                <li>ssize_t read(int fd, void *buf, size_t count): 从文件描述符fd中读取count个字节到缓冲区buf中，返回实际读取的字节数。</li>
+                <li>ssize_t write(int fd, const void *buf, size_t count): 从缓冲区buf中写入count个字节到文件描述符fd中，返回实际写入的字节数。</li>
+                <br>
+                <li>RIO是什么: rio是一种低级I/O接口，它提供了一种比标准I/O接口更加底层的访问方式，主要用于网络连接。</li>
+                <li>RIO的优点：可以访问设备驱动程序，可以直接访问内存，可以访问网络。</li>
+                <li>RIO的缺点：不支持多路复用，不支持超时，不支持异步I/O。</li>
+                <li>RIO的使用：rio_read(fd, buf, count)、rio_write(fd, buf, count)。</li>
+                <br>
+                <li>dup2(oldfd, newfd): 复制文件描述符，将文件描述符oldfd复制到文件描述符newfd。</li>
+                <li>dup(fd): 复制文件描述符，复制文件描述符fd，返回复制后的文件描述符。</li>
+            </div>
+            <div class="goods" id="virtual_memory">
+                <b>虚拟内存</b>
+                <li>VM(virtual memory)：使得一个物理内存可以被分割成多个大小相等的小内存块，每个小内存块都可以被映射到虚拟地址空间。</li>
+                <li>MMU(Memory Management Unit)：内存管理单元，负责将虚拟地址映射到物理地址。</li>
+                <li>PTE(Page Table Entry): 页表项，存储虚拟页和物理页的映射关系。</li>
+                <li>VP(Virtual Page): 虚拟页，是虚拟内存的最小单位，大小为4KB。</li>
+                <li>PP(Physical Page): 物理页，是物理内存的最小单位，大小为4KB。</li>
+                <br>
+                <li>共享库（shared library）：多个进程可以共享同一个库文件，其实现就是不同进程的虚拟地址空间映射到同一块物理内存。</li>
+                <li>页表（page table）：存储虚拟页和物理页的映射关系。</li>
+                <li>页帧（page frame）：物理内存的最小单位，大小为4KB。</li>
+                <li>页式存储管理：将虚拟地址空间划分为大小相同的页，每个页对应一个物理页。</li>
+                <li>段式存储管理：将虚拟地址空间划分为大小不等的段，每个段对应一个物理页。</li>
+                <li>段页式存储管理：将虚拟地址空间划分为大小不等的段，每个段对应多个物理页。</li>
+                <br>
+                <li>权限位：高位为0的地址为用户代码保留，高位为1的地址为内核代码保留。</li>
+                <li>TLB(Translation Lookaside Buffer)：页表缓存，用于缓存最近访问过的页表项。</li>
+                <li><img src="./pic/TLB_hit.png" alt="" style="height: 200px;width: auto;">&emsp;<img src="./pic/TLB_miss.png" alt="" style="height: 200px;width: auto;"></li>
+            </div>
+            <div class="goods" id="dynamic_storage_allocator">
+                <b>动态存储器分配器</b>
+                <li>基本思想：应用程序使用它去操作虚拟内存，去构造、分片以及释放虚拟储存器片</li>
+                <li>显式分配器：C/C++中的malloc()、new、free()等函数，由程序员手动调用。</li>
+                <li>隐式分配器：java、lisp、python等语言都有自己的隐式分配器，例如：垃圾回收器。</li>
+                <li>void* malloc(size_t size): </li>
+                <li>sbrk(size_t increment): sbreak, 系统调用，增加或者减少进程数据段的大小。</li>
+                <li>header field：头部字段，用于描述内存块的大小、状态等信息。</li>
+                <li>footer field：尾部字段，用于描述内存块的状态等信息。</li>
+                <li>空闲块链表：用于管理空闲块。</li>
+                <li>分配块：分配器从空闲块链表中找到一个空闲块，并将其分配给程序。</li>
+                <li>释放块：分配器将分配给程序的内存块释放回空闲块链表。</li>
+                <li>合并块：分配器将相邻的空闲块合并成一个大的空闲块。</li>
+                <li>分配策略：先进先出、最佳适应、最坏适应。</li>
+                <li>碎片整理：当程序释放内存块时，分配器将其合并到相邻的空闲块中。</li>
+                <li>寻找空闲块：先查看空闲块链表，如果有空闲块，则分配；如果没有空闲块，则向操作系统申请新的内存。</li>
+                <br>
+                <li><img src="./pic/find_free_block.png" alt="" style="height: 200px;width: auto;"></li>
+                <br>
+                <li></li>
+            </div>
+            <div class="goods">
+                <b>网络编程</b>
+                <li>IPv4：Internet Protocol version 4, 32字节的IP地址。</li>
+                <li>IPv6：Internet Protocol version 6, 128字节的IP地址。</li>
+                <li>网络使用大端字节序储存地址，字节高位在底层。</li>
+                <li>nslookup：域名解析工具。</li>
+                <li>一个ip对应多个域名，一个域名亦可以对应多个IP地址。</li>
+                <li><img src="./pic/internet_domain_names.png" alt="" style="height: 200px;width: auto;"></li>
+                <br>
+                <li>端口号对应特定服务：<img src="./pic/ports_serviceName.png" alt="" style="height: 200px;width: auto;"></li>
+                <br>
+                <li><img src="./pic/sockets_interface.png" alt="" style="height: 200px;width: auto;"></li>
+                <li>int socket(int domain, int type, int protocol): 创建套接字，返回文件描述符。</li>
+                <li>int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen): 绑定套接字到地址。</li>
+                <li>int listen(int sockfd, int backlog): 监听套接字，等待客户端连接。</li>
+                <li>int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen): 接受客户端连接, 返回新的套接字文件描述符。</li>
+                <li>int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen): 连接到服务器，返回0表示成功。</li>
+                <br>
+                <li>csapp.c与csapp.h：csapp.c是网络编程的入口文件，包含了网络编程的基本函数，适用于linux系统。</li>
+                <li>struct addrinfo { int ai_flags; int ai_family; <br>int ai_socktype; <br>int ai_protocol; <br>socklen_t ai_addrlen; <br>struct sockaddr *ai_addr; <br>char *ai_canonname; <br>struct addrinfo *ai_next; };</li>
+                <li>int getaddrinfo(const char *node, const char *service, const struct addrinfo *hints, struct addrinfo **res): 返回一个链表指针，包含一组套接字地址信息。</li>
+                <li>int getnameinfo(const struct sockaddr *sa, socklen_t salen, char *host, socklen_t hostlen, char *serv, socklen_t servlen, int flags): 将套接字地址转换为主机名和服务名。</li>
             </div>
         </div>
 
-        <div name="vim">
+        <div id="vim">
             <p>Vim</p>
-            <div id="goods">
+            <div class="goods">
                 <b>插入</b>
                 <li>i：进入编辑模式，输入字符；</li>
                 <li>a：进入编辑模式，在光标后插入字符；</li>
                 <li>o：在当前行下方打开新行；</li>
                 <li>O：在当前行上方打开新行；</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>移动</b>
                 <li>hjkl：左下上右键，光标移动;</li>
                 <li>（number）+web：下个单词，单词end，单词begin；</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>删除</b>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>输入</b>
                 <li>number+i+...+esc：输入内容重复number次；</li>
             </div>
+            <div class="goods">
+                <b>其他</b>
+                <li>u：返回上一步</li>
+            </div>
         </div>
 
-        <div name="fault">
+        <div id="fault">
             <p>报错</p>
-            <div id="goods">
+            <div class="goods">
                 <b>典型</b>
                 <li>segmentation fault(分段错误)：程序试图访问非法的内存地址。</li>
                 <li>stack overflow(栈溢出)：程序调用函数时，栈的空间不足，导致溢出。</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>c++标准库异常类</b>
                 <li>std::bad_alloc：内存分配失败。</li>
                 <li>std::bad_cast：类型转换失败。</li>
@@ -160,9 +285,9 @@
             </div>
         </div>
 
-        <div name="regex">
+        <div id="regex">
             <p>正则表达式</p>
-            <div id="goods">
+            <div class="goods">
                 <b>基础</b>
                 <li>^：匹配字符串的开始；</li>
                 <li>$：匹配字符串的结束；</li>
@@ -175,7 +300,7 @@
                 <li>^：匹配字符串的开始；</li>
                 <li>$：匹配字符串的结束；</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>特殊</b>
                 <li>\d：匹配任意数字；</li>
                 <li>\D：匹配任意非数字；</li>
@@ -192,7 +317,7 @@
                 <li>\a：匹配响铃符；</li>
                 <li>\e：匹配 escape 字符；</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>示例</b>
                 <li>phone_num：(\\()?(\\d{3})(\\))?([-. ])?(\\d{3})([-. ]?)(\\d{4})</li>
                 <li>^hello：匹配以hello开头的字符串；</li>
@@ -210,28 +335,28 @@
                 <li>hello\Bworld：匹配hello后面和world前面都不是单词边界的字符串；</li>
             </div>            
         </div>
-        <div name="cpp">
+        <div id="cpp">
             <p>C++</p>
-            <div id="goods">
+            <div class="goods">
                 <b>字符串</b>
                 <li>substr方法：string new_str = s.substr(pos, len)，拷贝从pos开始的len个字符到一个新的字符串。</li>
                 <li>replace方法：s = s.replace (size_t pos, size_t len, const string& str); 可结合s.find()方法，到达替换目标字符串。</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>STL容器</b>
                 <li>map：key-value对的集合，通过key查找value。</li>
                 <li>unordered_map：key-value对的集合，通过key查找value，不会根据key的大小进行排序。</li>
                 <li>set、map：插入、查找、删除的时间复杂度为O(logn);</li>
                 <li>unordered_set、unordered_map：插入、查找、删除的时间复杂度为O(1);</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>vector的小知识</b>
                 <li>emplace_back方法：在vector尾部直接创建元素，省去了push_back创建临时对象以及其移动或拷贝的步骤。</li>
                 <li>pop_back：与push_back相对应，删除vector尾部元素。</li>
                 <li>resize：resize(size_t new_size, const T& val)，调整vector的大小</li>
                 <li>assign：assign(size_t count, const T& val)，将vector所有元素赋值为val。</li>
             </div>
-            <div id="goods">
+            <div class="goods">
                 <b>&的用法</b>
                 <li>取地址：int *p = &a，p指向a的地址。</li>
                 <li>引用（别名）：int &r = a，r是a的别名，可以直接用r来代替a。作为函数的参数，处理大块数据的传递（有同样的作用的便是指针）；</li>
@@ -239,7 +364,57 @@
                 <li>作为函数的返回：int &Func(){}，在内存中不产生返回值的临时变量，但是不能返回函数局部变量</li>
             </div>
         </div>
-
+        <div id="compiler">
+            <p>手搓简易虚拟机和c编译器</p>
+            <div class="goods">
+                <b>设计思路</b>
+                <li><b>源代码</b>->词法分析->语法分析->语义分析-><b>中间代码</b>(->优化器（optimizor）->中间代码)-><b>目标代码</b>->汇编代码->机器码。</li>
+                <li>词法分析：</li>
+                <li>中间代码：一般为AST（抽象语法树）</li>
+                <li>自制简易编译器：前后端合一，自定义VM，one-pass（一遍过）</li>
+                <li>自定义VM：register: pc/sp/bp/ax; MEM: code/data/stack; 指令集: Save&Load/cal运算/分支跳转(/Native-Call)</li>
+                <li>cal: 四则运算、位运算、逻辑运算</li>
+                <li>分支跳转：branch/jump/cmp/call/return</li>
+                <li>Native-Call: IO(print/open/write/read)、动态(malloc/free/memset)</li>
+            </div>
+            <div class="goods">
+                <b>函数调用</b>
+                <li>stack：保存参数、返回地址、局部变量、临时变量</li>
+                <li>BrainFuck: 指针指向当前位置，+/-移动指针，[跳转]、,输入、.输入_______e.g. ,>,[<+>-]</li>
+                <li>四指令：CALL\NAVR\DARG\RET</li>
+                <li>call: 保存返回地址，跳转到目标函数</li>
+                <li>navr: 跳转到目标地址</li>
+                <li>darg: 保存参数</li>
+                <li>ret: 返回</li>
+            </div>
+            <div class="goods">
+                <b>词法分析</b>
+                <li>关键字：</li>
+                <li>标识符</li>
+                <li>tokenize方法：将源代码分割成token</li>
+                <li>符号表：token-id、hash、name、class、type、value（address）</li>
+            </div>
+            <div class="goods">
+                <b>语法分析</b>
+                <li>syntax: </li>
+                <li>lexeme: 词素</li>
+                <li>token: 象征</li>
+                <li>semantic: 语义</li>
+                <li>grammar: 语法</li>
+                <li>文法：E->E+T|T</li>
+                <li>递归下降: S = aS | bS`<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;S` = a | µ</li>
+                <li>S: 开始符</li>
+                <li>a、b: 终结符, 理解为token</li>
+                <li>µ：空</li>
+                <li>|：或</li>
+            </div>
+            <div class="goods">
+                <b>表达式求值</b>
+                <li>语句与表达式：</li>
+                <li>优先级爬山算法：</li>
+            </div>
+        </div>
 
         <div class="backtop">
             <img src="../pic/backtop.png" alt="" height="100px">
