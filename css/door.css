@@ -1,0 +1,39 @@
+
+section {
+    margin: 100px auto;
+    height:500px;
+    width: 500px;
+    background: url(../pic/0.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    border: 1px solid blue;
+  }
+  .l,.r {
+    height:100% ;
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    transition: all .9s;
+  }
+  .l {
+    left: 0;
+    top: 0;
+    border-right: 1px solid skyblue;
+    transform-origin: left;
+    
+  }
+  .r {
+    right: 0;
+    top: 0;
+    border-left: 1px solid skyblue;
+    transform-origin: right;
+   
+    
+  }
+ section:hover .l{
+    
+   transform: rotateY(-180deg);
+  }
+  section:hover .r{
+   transform: rotateY(180deg);
+  }

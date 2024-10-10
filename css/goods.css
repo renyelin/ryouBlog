@@ -5,34 +5,35 @@ body{
     background-color: blanchedalmond;
 }
 
-#goods{
+.goods{
     border-radius: 5px;
     padding: 10px 5px;
     margin: 10px 10px;
     background-color: rgb(255, 220, 178);
 }
 
-#goods li{
+.goods li{
+    padding: 5px;
     list-style-image:url(../pic/star.png);
 }
 
-#goods li li{
+.goods li li{
     list-style-image: none;
 }
 
-#goods li textarea{
+.goods li textarea{
     display: none;
 }
 
-#goods p span{
+.goods p span{
     font-size: 20px;
 }
 
-#goods li p{
+.goods li p{
     margin: 10px 0;
 }
 
-#goods li mfrac{
+.goods li mfrac{
     font-size: 25px;
 }
 
@@ -41,32 +42,32 @@ p{
     font-weight: 850;
 }
 
-#goods b{
+.goods b{
     font-size: 17px;
 }
 
-#goods a:link{
+.goods a:link{
     text-decoration-line: none;
     color: #000;
 }
 
-#goods a:visited{
+.goods a:visited{
     text-decoration-line: none;
     color: #000;
 }
 
-#goods a:hover{
+.goods a:hover{
     text-decoration-line: underline;
     color: purple;
 }
 
-#goods img{
+.goods img{
     vertical-align: top;
     height: 50px;
     width: 70px;
 }
 
-#goods #link{
+.goods #link{
     vertical-align: middle;
     height: 40px;
     width: auto;
